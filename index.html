@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>JSB : 정수빈 웹 포트폴리오</title>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+	<!-- script -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+	<script type="text/javascript" src="./lib/jquery/owl.carousel.min.js"></script>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./lib/owl/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="./lib/owl/owl.theme.default.css">
+</head>
+<body>
+	<div id="modal"></div>
+	<!-- /modal -->
+
+	<div id="wrap">
+		<header>
+			<nav class="hdHam">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</nav>
+
+			<nav class="hdNav">
+				<a href="#main">main</a>
+				<a href="#aboutme">aboutme</a>
+				<a href="#skills">skills</a>
+				<a href="#works">works</a>
+				<a href="#contact">contact</a>
+			</nav>
+		</header>
+		<!-- /header -->
+
+		<div id="container">
+			<section id="main">
+				<div class="inner minner">
+					<h3>main</h3>
+					<div class="mText">
+						<div>안녕하세요</div>
+						<div id="text" class="texting"></div>
+						<div>정수빈입니다</div>
+					</div>
+				</div>
+			</section>
+			<!-- /main -->
+
+			<section id="aboutme">
+				<div class="inner ainner">
+					<h3>about me</h3>
+					<div class="aPhoto"><img src="./img/aboutme_bg.jpg" alt="수빈사진"></div>
+					<div class="aDesc">
+						<div class="about profile">
+							<h4>profile</h4>
+							<ul class="pro1">
+								<li>이름</li>
+								<li>생년월일</li>
+								<li>주소</li>
+								<li>연락처</li>
+								<li>이메일</li>
+							</ul>
+							<ul class="pro2">
+								<li>정수빈</li>
+								<li>1993. 12. 01</li>
+								<li>서울시 중랑구</li>
+								<li>010. 3214. 7407</li>
+								<li>ttubiny@gmail.com</li>
+							</ul>
+						</div>
+
+						<div class="about history">
+							<h4>history</h4>
+							<ul class="his1">
+								<li><i>20</i>18. 09 - <i>20</i>19. 01</li>
+								<li><i>20</i>17. 07 - <i>20</i>18. 07</li>
+								<li><i>20</i>15. 03 - <i>20</i>16. 12</li>
+								<li><i>20</i>14. 01 - <i>20</i>14. 06</li>
+								<li><i>20</i>12. 03 - <i>20</i>14. 02</li>
+							</ul>
+							<ul class="his2">
+								<li>그린컴퓨터아트학원 디지털컨버전스<br><span>UI/UX엔지니어링, 프론트앤드</span></li>
+								<li>나인디자인컴퍼니 브랜드 사업부</li>
+								<li><span>미국</span> 어학연수</li>
+								<li>한국디지털기업협회 디지털인재개발원<br><span>Multi-Platform기반 UX/UI Design Expert</span></li>
+								<li>동서울 대학교 컴퓨터 정보과</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /aboutme -->
+
+			<section id="skills">
+				<div class="inner sinner">
+					<h3>skills</h3>
+					<ul id="barWrap">
+						<li class="barList">
+							<p class="barTitle">html5</p>
+							<div class="graphFrm">
+								<div class="barGraph">
+									<canvas data-percent="90" data-barColor="#ea7361" data-barWidth="30" data-time="2"></canvas>
+									<p class="barText">0</p>
+								</div>
+							</div>
+							<p class="barInfo">웹접근성, 웹표준에 맞는<br>홈페이지를 만들 수 있습니다</p>
+						</li>
+						<li class="barList">
+							<p class="barTitle">css3</p>
+							<div class="graphFrm">
+								<div class="barGraph">
+									<canvas data-percent="85" data-barColor="#b74242" data-barWidth="30" data-time="2"></canvas>
+									<p class="barText">0</p>
+								</div>
+							</div>
+							<p class="barInfo">스타일의 속성을 이해하고 있고,<br>css만으로 반응형 홈페이지를 만들 수 있습니다</p>
+						</li>
+						<li class="barList">
+							<p class="barTitle">java script</p>
+							<div class="graphFrm">
+								<div class="barGraph">
+									<canvas data-percent="30" data-barColor="#ea7361" data-barWidth="30" data-time="2"></canvas>
+									<p class="barText">0</p>
+								</div>
+							</div>
+							<p class="barInfo">스크립트에 대한 기본적인<br>지식을 가지고 있습니다</p>
+						</li>
+						<li class="barList">
+							<p class="barTitle">jquery</p>
+							<div class="graphFrm">
+								<div class="barGraph">
+									<canvas data-percent="40" data-barColor="#b74242" data-barWidth="30" data-time="2"></canvas>
+									<p class="barText">0</p>
+								</div>
+							</div>
+							<p class="barInfo">오픈소스를 활용하여 사용할 수 있고,<br>간단한 효과는 직접 개발할 수 있습니다</p>
+						</li>
+						<li class="barList">
+							<p class="barTitle">photoshop</p>
+							<div class="graphFrm">
+								<div class="barGraph">
+									<canvas data-percent="80" data-barColor="#ea7361" data-barWidth="30" data-time="2"></canvas>
+									<p class="barText">0</p>
+								</div>
+							</div>
+							<p class="barInfo">포토샵의 기본 사용법을 알고 있고,<br>활용할 수 있습니다.</p>
+						</li>
+						<li class="barList">
+							<p class="barTitle">illustrator</p>
+							<div class="graphFrm">
+								<div class="barGraph">
+									<canvas data-percent="60" data-barColor="#b74242" data-barWidth="30" data-time="2"></canvas>
+									<p class="barText">0</p>
+								</div>
+							</div>
+							<p class="barInfo">일러스트의 기본 사용법을 알고 있고,<br>활용할 수 있습니다.</p>
+						</li>
+					</ul>
+					<ul id="prgLine">
+						<li class="prgList">
+							<div class="prgtit">html5</div>
+							<div class="prgbar"></div>
+							<div class="prgtext">0</div>
+							<div class="prgdesc">웹접근성, 웹표준에 맞는 홈페이지를 만들 수 있습니다.</div>
+						</li>
+						<li class="prgList">
+							<div class="prgtit">css3</div>
+							<div class="prgbar"></div>
+							<div class="prgtext">0</div>
+							<div class="prgdesc">스타일의 속성을 이해하고 있고, css만으로 반응형 홈페이지를 만들 수 있습니다.</div>
+						</li>
+						<li class="prgList">
+							<div class="prgtit">javascript</div>
+							<div class="prgbar"></div>
+							<div class="prgtext">0</div>
+							<div class="prgdesc">스크립트에 대한 기본적인 지식을 가지고 있습니다.</div>
+						</li>
+						<li class="prgList">
+							<div class="prgtit">jquery</div>
+							<div class="prgbar"></div>
+							<div class="prgtext">0</div>
+							<div class="prgdesc">오픈소소를 활용하여 사용할 수 있고, 간단한 효과는 직접 개발할 수 있습니다.</div>
+						</li>
+						<li class="prgList">
+							<div class="prgtit">photoshop</div>
+							<div class="prgbar"></div>
+							<div class="prgtext">0</div>
+							<div class="prgdesc">포토샵의 기본적인 기능을 다룰 수 있습니다.</div>
+						</li>
+						<li class="prgList">
+							<div class="prgtit">illustrator</div>
+							<div class="prgbar"></div>
+							<div class="prgtext">0</div>
+							<div class="prgdesc">일러스트의 기본적인 기능을 다룰 수 있습니다.</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- /skills -->
+
+			<section id="works">
+				<div class="pop">
+					<div class="close">닫기</div>
+					<div class="popInner">
+						<div class="tit"></div>
+						<div class="desc"></div>
+						<div class="info">
+							<ul class="info_tit">
+								<li>color</li>
+								<li>fonts</li>
+								<li>tech stack</li>
+							</ul>	
+							<ul class="detail">
+								<li class="color">
+									<span class="color1"></span>&nbsp;<em class="colortxt1"></em>
+									<span class="color2"></span>&nbsp;<em class="colortxt2"></em>
+									<span class="color3"></span>&nbsp;<em class="colortxt3"></em>
+								</li>
+								<li class="font"></li>
+								<li class="tools"></li>
+							</ul>					
+						</div>															
+						<div class="buttonWrap"><a href="#" target="blank" class="site">사이트 바로가기</a></div>		
+						<div class="image"></div>
+					</div>
+				</div>
+
+				<div class="inner winner">
+					<h3>works</h3>
+					<div class="slider owl-carousel owl-theme">
+					    <div class="slide slide1" data-img="./img/work_1.jpg" data-site="./topstage/index.html">
+							<div class="workCom"><img src="./img/work_computer1.png" alt="탑스테이지"></div>
+					    	<div class="workTxt">
+								<div class="wnum">01</div>
+								<div class="wtit">탑스테이지</div>
+								<div class="wdesc">기존의 노후화된 홈페이지에 모든 사람들이 쉽게 알아볼 수 있도록 최신 트렌드 디자인과 ux/ui를 반영하여 탑스테이지라는 회사에 대한 접근성을 높이고자 하였습니다.</div>
+								<div class="wprd">2018. 12 - 2019. 01 (2weeks)</div>
+								<div class="wworks">html, css3, jquery<br>photoshop, illustrator</div>
+								<div class="wtools hidden">html5, css3, jquery, photoshop</div>
+								<div class="wfont hidden">open sans / noto sans kr</div>
+								<div class="wcolor hidden">
+									<span class="wcolor1" style="background-color: #182f59;"></span><em class="wctext1">#182f59</em>
+									<span class="wcolor2" style="background-color: #42b5e2;"></span><em class="wctext2">#42b5e2</em>
+									<span class="wcolor3" style="background-color: #e6e7e9;"></span><em class="wctext3">#e6e7e9</em>
+								</div>
+								<div class="wmore">more</div>
+							</div>
+					    </div>
+
+					    <div class="slide slide2" data-img="./img/work_2.jpg" data-site="./coupang/index.html">
+							<div class="workCom"><img src="./img/work_computer2.png" alt="쿠팡"></div>
+					    	<div class="workTxt">
+								<div class="wnum">02</div>
+								<div class="wtit">쿠팡</div>
+								<div class="wdesc">선생님, 수강생들과 함께 처음으로 쿠팡 기존 홈페이지를 참고하여 html과 css를 연습하면서 카피한 작업물 입니다.</div>
+								<div class="wprd">2018. 11 (3weeks)</div>
+								<div class="wworks">html, css3</div>
+								<div class="wtools hidden">html5, css3</div>
+								<div class="wfont hidden">쿠팡 기본 폰트</div>
+								<div class="wcolor hidden">
+									<span class="wcolor1">-</span><em class="wctext1"></em>
+									<span class="wcolor2"></span><em class="wctext2"></em>
+									<span class="wcolor3"></span><em class="wctext3"></em>
+								</div>
+								<div class="wmore">more</div>
+							</div>
+					    </div>
+
+					    <div class="slide slide3" data-img="./img/work_3.jpg" data-site="./tenbyten/index.html">
+							<div class="workCom"><img src="./img/work_computer3.png" alt="텐바이텐"></div>
+					    	<div class="workTxt">
+								<div class="wnum">03</div>
+								<div class="wtit">텐바이텐</div>
+								<div class="wdesc">팀 프로젝트로 텐바이텐 기존 홈페이지를 참고하여 직접 html과 css를 이용하여 카피한 작업물 입니다.</div>
+								<div class="wprd">2018. 11 - 2018. 12 (2weeks)</div>
+								<div class="wworks">html, css3</div>
+								<div class="wtools hidden">html5, css3, jquery, photoshop</div>
+								<div class="wfont hidden">텐바이텐 기본 폰트</div>
+								<div class="wcolor hidden">
+									<span class="wcolor1">-</span><em class="wctext1"></em>
+									<span class="wcolor2"></span><em class="wctext2"></em>
+									<span class="wcolor3"></span><em class="wctext3"></em>
+								</div>
+								<div class="wmore">more</div>
+							</div>
+					    </div>
+
+					  <!--   <div class="slide slide4" data-img="./img/work_4.jpg" data-site="./yuumbba/index.html">
+							<div class="workCom"><img src="./img/work_computer4.png" alt="유엄빠:유기견들의 엄마 아빠"></div>
+					    	<div class="workTxt">
+								<div class="wnum">04</div>
+								<div class="wtit">베이컨박스</div>
+								<div class="wdesc">현재 재작중에 있습니다.</div>
+								<div class="wprd">2019. 02 (2weeks)</div>
+								<div class="wworks">html, css3, jquery<br>photoshop, illustrator</div>
+								<div class="wtools hidden">html5, css3, jquery, photoshop</div>
+								<div class="wfont hidden">open sans / noto sans kr</div>
+								<div class="wcolor hidden">
+									<span class="wcolor1"></span><em class="wctext1"></em>
+									<span class="wcolor2"></span><em class="wctext2"></em>
+									<span class="wcolor3"></span><em class="wctext3"></em>
+								</div>
+								<div class="wmore">more</div>
+							</div>
+					    </div> -->
+
+					    <div class="slide slide5" data-img="./img/work_5.jpg" data-site="./index.html">
+							<div class="workCom"><img src="./img/work_computer5.png" alt="정수빈 개인 포트폴리오"></div>
+					    	<div class="workTxt">
+								<div class="wnum">04</div>
+								<div class="wtit">개인 포트폴리오</div>
+								<div class="wdesc">지난 4개월동안 직접 디자인하고 코딩했던 작업내용을 모아놓은 저의 개인 포트폴리오 입니다. 태블릿, 모바일에서도 쉽게 접근할 수 있도록 반응형으로 구현하였습니다.</div>
+								<div class="wprd">2019. 01 (2weeks)</div>
+								<div class="wworks">html, css3, java script<br>photoshop</div>
+								<div class="wtools hidden">html5, css3, jquery, photoshop</div>
+								<div class="wfont hidden">open sans / noto sans kr / chewy</div>
+								<div class="wcolor hidden">
+									<span class="wcolor1" style="background-color: #fff7f0;"></span><em class="wctext1">#fff7f0</em>
+									<span class="wcolor2" style="background-color: #ea7361;"></span><em class="wctext2">#ea7361</em>
+									<span class="wcolor3" style="background-color: #b74242;"></span><em class="wctext3">#b74242</em>
+								</div>
+								<div class="wmore">more</div>
+							</div>
+					    </div>
+					</div>
+				</div>
+			</section>
+			<!-- /works -->
+
+			<section id="contact">
+				<div class="inner cinner">
+					<h3>contact</h3>
+					<div class="ctext">
+						<div class="cname">
+							<div class="cname1">정수빈</div>
+							<div class="cname2">web publisher<br>front-end developer</div>
+						</div>
+						<div class="cdesc">제 포트폴리오를<br>끝까지 봐주셔서 감사합니다</div>
+						<div class="cinfo">
+							<div class="cnum">010. 3214. 7407</div>
+							<div class="cmail">ttubiny@gmail.com</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /wrap -->
+
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

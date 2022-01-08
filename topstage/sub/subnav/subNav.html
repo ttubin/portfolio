@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TopStage : 회사소개</title>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Open+Sans:300,400,600,700,800&amp;subset=korean" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/sub.css">
+	<!-- script -->
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="submenu">
+				<div class="svisual vabou">
+					<div class="inner">
+						<h3>회사소개</h3>
+						<div class="varrow">
+							<a href="./customer.html" class="aL">고객센터</a>
+							<a href="./portfolio.html" class="aR">포트폴리오</a>
+						</div>
+					</div>
+				</div>
+				<!-- /stop -->
+
+				<div class="snav snav1">
+					<ul class="inner">
+						<li>홈</li>
+						<li>회사소개</li>
+						<li class="snav1">
+							<div class="navSelect">
+								<input type="checkbox" id="anav">
+								<input type="radio" name="Rnav" id="about1">
+								<input type="radio" name="Rnav" id="about2">
+								<input type="radio" name="Rnav" id="about3">
+								<input type="radio" name="Rnav" id="about4">
+								<label for="anav" class="selected"><span>ceo인사말</span></label>
+
+								<nav>
+									<label for="about1">ceo인사말</label>
+									<label for="about2">사업영역</label>
+									<label for="about3">비전</label>
+									<label for="about4">연혁</label>
+								</nav>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /snav -->
+			</div>
+			<!-- /submenu -->
+
+			<div id="content" class="aContent">
+
+				<div class="inner">
+					<h3>회사소개</h3>
+					<span class="subh3">고객 삶의 질을 향상시키는 토탈 서비스 지식회사</span>
+				</div>
+
+				<div id="atab">
+					<nav class="inner">
+						<a href="#aIntro" class="active">ceo인사말</a>
+						<a href="#aBusin">사업영역</a>
+						<a href="#aVision">비전</a>
+						<a href="#aHistory">연혁</a>
+					</nav>
+					<!-- nav -->
+
+					<div class="atabCnt">
+						<section id="aIntro">
+							<div class="inner">
+								<h4>ceo인사말</h4>
+								<div class="aCnt"></div>
+							</div>
+						</section>
+						<!-- /aIntro -->
+
+						<section id="aBusin">
+							<div class="inner">
+								<h4>사업영역</h4>
+								<div class="aCnt"></div>
+							</div>
+						</section>
+						<!-- /aBusin -->
+
+						<section id="aVision">
+							<div class="inner">
+								<h4>비전</h4>
+								<div class="aCnt"></div>
+							</div>
+						</section>
+						<!-- /aVision -->
+
+						<section id="aHistory">
+							<div class="inner">
+								<h4>연혁</h4>
+								<div class="aCnt"></div>
+							</div>
+						</section>
+						<!-- /aHistory -->
+					</div>
+					<!-- /tabCnt -->
+				</div>
+				<!-- /tab -->
+			</div>
+		</div>
+		<!-- /container -->
+	</div>
+
+	<script type="text/javascript">
+		$('.selected').click(function(){
+			$('.navSelect nav').toggle();
+		});
+	
+		$('.navSelect nav label').click(function(){ // 노드 제대로 설정하자^^
+			var idx = $(this).index();
+			$('.navSelect nav').hide(); // toggle()을 써줘도 됨
+			$('#atab nav a').eq(idx).click(); // trigger()는 강제로 함수를 실행시켜줌
+			$('input#anav').prop('checked',false);
+
+			var txt = $('.navSelect nav label')[idx].textContent;
+			$('.navSelect .selected span').text(txt);
+		});
+
+		// $('#atab nav a').click(function(){
+		// 	var idx = $(this).index();
+		// 	$('#atab nav a').removeClass('active');
+		// 	$(this).addClass('active');
+		// 	$('section').hide().eq(idx).show();
+
+		// 	var txt = $('#atab nav a')[idx].textContent;
+		// 	$('.navSelect .selected span').text(txt);
+			
+		// 	return false; // a태그가 움직이는것을 초기화? 시켜줌
+		// });
+	</script>
+</body>
+</html>

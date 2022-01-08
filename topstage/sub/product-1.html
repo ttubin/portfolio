@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TopStage : 제품소개</title>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Open+Sans:300,400,600,700,800&amp;subset=korean" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<!-- script -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<style type="text/css">
+		#wrap {margin: 100px 0;}
+		
+		#container {}
+		
+		/* submenu */
+		#submenu .snav {font-size: 14px; line-height: 50px; background-color: #182f59;}
+		#submenu .snav ul li {float: left; position: relative; padding: 0 25px; color: #ddd; font-weight: 300; letter-spacing: 1px;}
+		#submenu .snav ul li:after {content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 50px; background-image: url(../img/sub/aboutus/nav_line.jpg);}
+		#submenu .snav ul li:last-child:before {content: ""; position: absolute; top: 0; right: 0; width: 2px; height: 50px; background-image: url(../img/sub/aboutus/nav_line.jpg);}
+		#submenu .snav ul li.snav2 {width: 195px;}
+		.snav2 .navSelect nav {width: 194px;}
+		.navSelect {position: relative; z-index: 100;}
+		.navSelect .selected {display: block; position: relative; padding-right: 15px; color: #fff;}
+		.navSelect .selected:after {content: ""; position: absolute; top: 50%; right: 0; margin-top: -5px; width: 5px; height: 5px; border: 1px solid #ddd; border-width: 0 0 1px 1px; transform: rotate(-45deg);}
+		.navSelect .selected span {display: block; text-transform: uppercase;}
+		.navSelect nav {display: none; overflow: auto; position: absolute; top: 100%; left: -25px; right: 0; color: #aaa; background-color: #fff; border: 1px solid #ddd; border-top: 0;}
+		.navSelect nav label {display: block; padding: 25px; line-height: 1; color: #aaa; font-size: 14px; font-weight: 300; text-transform: uppercase;}
+		.navSelect nav label+label {padding-top: 0;}
+		.navSelect nav label:hover {color: #182f59; font-weight: 700;}
+
+		/* checked */
+		input:checked~nav {display: block;}
+		#pnav:checked~.selected:after {margin-top: -2px; border-width: 1px 1px 0 0;}
+
+		#content {}
+		#content h3 {margin-top: 90px; text-align: center; font-size: 40px; font-weight: 700;}
+		#content span.subh3 {display: block; margin-bottom: 45px; text-align: center; font-weight: 300;}
+
+		#ptab {}
+		#ptab .navBtn {}
+		#ptab .navBtn input[type] {}
+		#ptab ul {overflow: hidden;/* background-color: indianred;*/}
+		#ptab ul li {overflow: hidden; float: left; margin-left: 30px; width: 380px; height: 450px;}
+		#ptab ul li:nth-child(3n+1) {margin-left: 0;}
+		#ptab ul li:nth-child(n+4) {margin-top: 30px;}
+		#ptab ul li a {position: relative; display: block; width: 100%; height: 100%; text-align: center;}
+		#ptab ul li a span {display: block;}
+		#ptab ul li a .thumb {height: 100%; transition: transform 1s;}
+		#ptab ul li a .thumb:after {content: ""; display: block; overflow: hidden;}
+		#ptab ul li:hover a .thumb {transform: scale(1.2);}
+		#ptab ul li a .backthumb {position: absolute; top: 0; bottom: 0; left: 0; right: 0; padding-top: 150px; color: #fff; opacity: 0; background-color: rgba(0,0,0,0.7); text-transform: uppercase; transition: opacity 1s;}
+		#ptab ul li:hover a .backthumb {opacity: 1;}
+		#ptab ul li a .backthumb .type {font-size: 30px; font-weight: 700;}
+		#ptab ul li a .backthumb .name {font-weight: 100;}
+		#ptab ul li a .backthumb .btn {margin: 30px 130px; padding: 5px 0; font-size: 14px; font-weight: 100; border: 1px solid #fff;}
+		#ptab ul li a .backthumb .btn:hover {color: #000; font-weight: 700; background-color: #fff;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="submenu">
+				<div class="snav">
+					<ul class="inner">
+						<li>홈</li>
+						<li>제품소개</li>
+						<li class="snav2">
+							<div class="navSelect">
+								<input type="checkbox" id="pnav">
+								<input type="radio" name="Rnav" id="prod1">
+								<input type="radio" name="Rnav" id="prod2">
+								<input type="radio" name="Rnav" id="prod3">
+								<input type="radio" name="Rnav" id="prod4">
+								<input type="radio" name="Rnav" id="prod5">
+								<label for="pnav" class="selected"><span>상·하부 기계장치</span></label>
+
+								<nav>
+									<label for="prod1">상·하부 기계장치</label>
+									<label for="prod2">무대막&스크린</label>
+									<label for="prod3">무대&스튜디오 조명</label>
+									<label for="prod4">효과기</label>
+									<label for="prod5">무대 컨트롤 시스템</label>
+								</nav>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /smenu -->
+			</div>
+			<!-- /submenu -->
+
+			<div id="content">
+				<div class="inner">
+					<h3>제품소개</h3>
+					<span class="subh3">고객 삶의 질을 향상시키는 토탈 서비스 지식회사</span>
+
+					<div id="ptab">
+						<div class="navBtn">
+							<input type="button" value="전체" data-attr="number" class="active">
+							<input type="button" value="타입별" data-attr="type">
+						</div>
+
+						<ul class="tabcnts clearfix">
+							<li><a href="#">
+								<span class="thumb">
+									<img src="#">
+								</span>
+								<span class="backthumb">
+									<span class="type"></span>
+									<span class="name"></span>
+									<span class="btn"></span>
+								</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /container -->
+	</div>
+
+	<script type="text/javascript">
+		var back;
+
+		$.ajax({
+			url : '../data/product_data.json',
+			async : false,
+			success : function(data){
+				back = data;
+			}
+		});
+
+		// console.log(back);
+
+		var O = $('ul.tabcnts li');
+		$('ul.tabcnts li').remove();
+
+		// console.log(O);
+
+		var idx = 0;
+
+		$(window).scroll(function(){
+			var T = $(window).scrollTop(); // window top
+			var H = $(window).height(); // window height
+			var W = $('#ptab').innerHeight(); // ptab height
+
+			if(T+H>=W){ // -10은 밑에 딱 달라붙지 않고 살짝 띄어주기 위하여 씀
+				for(var i=0; i<3; i++){ // i가 3개 생기게 되면 밑으로 반복적으로 생기도록 선언해줌
+					if(back.length>idx){
+						O.find('.thumb').css('background-image', 'url('+back[idx].thumb+')');
+						O.find('.type').text(back[idx].type);
+						O.find('.name').text(back[idx].name);
+						O.find('.btn').text(back[idx].btn);
+						O.clone().appendTo('ul.tabcnts');
+						idx++;
+					}
+				}
+				$(window).scroll();
+			}
+		}).scroll();
+
+	</script>
+</body>
+</html>

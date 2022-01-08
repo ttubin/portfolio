@@ -1,0 +1,75 @@
+/* --------------------------------------------- reset --------------------------------------------- */
+*, :before, :after {margin: 0; padding: 0; color: inherit; font-size: inherit; font-weight: inherit; text-decoration: inherit; font-style: inherit; border: 0 solid transparent; outline: 0 solid transparent; background: transparent none center center no-repeat; box-sizing: border-box;}
+ul, ol {list-style: none;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: inherit;}
+input {display: none;}
+label, button, [type=button], [type=submit], [type=reset], a {cursor: pointer;}
+[type=checkbox], [type=radio] {display: none;}
+table {table-layout: fixed; border-collapse: collapse;}
+img {display: block;}
+
+
+
+/* --------------------------------------------- class --------------------------------------------- */
+.clearfix:after {content: ""; display: block; clear: both;}
+.ellipsis {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.hidden {display: none; width: 0; height: 0; visibility: hidden; opacity: 0;}
+.inner {position: relative; margin: auto; width: 1200px; height: 100%;/* background-color: khaki;*/}
+.inner:after {content: ""; display: block; clear: both;}
+
+
+
+
+/* --------------------------------------------- wrap --------------------------------------------- */
+#wrap {font-family: 'Open Sans', 'Noto Sans KR', sans-serif; min-width: 1280px;}
+
+
+
+/* --------------------------------------------- header --------------------------------------------- */
+header {}
+header .h_top {background-color: #182f59; border-bottom: 1px solid #42b4d9;}
+header .h_top .gnb {float: right; line-height: 29px; font-size: 12px; color: #fff; text-transform: uppercase;}
+header .h_top .gnb p {float: left; padding-right: 15px;}
+header .h_top .gnb ul {overflow: hidden;}
+header .h_top .gnb ul li {float: left; margin-top: 8px;}
+header .h_top .gnb ul li+li {padding-left: 10px;}
+header .h_top .gnb ul li a {display: block; width: 20px; height: 10px; text-indent: -9999px; background-image: url(../img/common/flag.png); background-size: 20px;}
+header .h_top .gnb ul li .korean {height: 13px; background-position: 0 0;}
+header .h_top .gnb ul li .english {height: 14px; background-position: 0 -14px;}
+header .h_cnt {height: 100px;}
+header .h_cnt h1 {float: left;}
+header .h_cnt h1 a {display: block; margin: 18px 0 17px; width: 135px; height: 65px; text-indent: -9999px; background-image: url(../img/common/h_logo.png); background-size: 135px;}
+header .h_cnt nav {float: right; margin-top: 45px;}
+header .h_cnt nav ul {overflow: hidden;}
+header .h_cnt nav ul li {float: left;}
+header .h_cnt nav ul li:hover {padding-bottom: 5px; border-bottom: 3px solid #182f59;}
+header .h_cnt nav ul li+li {margin-left: 90px;}
+header .h_cnt nav ul li a {color: #333;}
+header .h_cnt nav ul li a:hover {color: #000;}
+
+
+
+/* --------------------------------------------- footer --------------------------------------------- */
+footer {height: 300px; color: #676767;}
+footer .f_cnt {background-color: #333; font-size: 14px;}
+footer .f_cnt h2 {float: left; margin: 85px 0; width: 150px; height: 80px; text-indent: -9999px; background-image: url(../img/common/f_logo.png); background-size: 150px;}
+footer .f_cnt address {float: left; margin: 55px 60px; width: 290px;}
+footer .f_cnt address ul {float: left;}
+footer .f_cnt address ul:nth-child(1) {color: #999;}
+footer .f_cnt address ul+ul {margin-left: 15px;}
+footer .f_cnt address ul li+li {margin-top: 10px;}
+footer .f_cnt .link {float: left; margin: 40px 60px; width: 110px;}
+footer .f_cnt .link li+li {margin-top: 10px;}
+footer .f_cnt .link li a:hover {color: #999; font-weight: 700; text-decoration: underline;}
+footer .f_cnt .customer {float: left; margin: 40px 0 0 60px; width: 290px; text-align: center;}
+footer .f_cnt .customer li {}
+footer .f_cnt .customer li img {display: block;}
+footer .f_cnt .customer li+li {margin-top: 5px;}
+footer .f_cnt .customer li.c_icon {display: block; margin: auto; width: 80px; height: 80px; text-indent: -9999px; background-image: url(../img/common/c_icon.png);}
+footer .f_cnt .customer li.c_number {font-size: 29px; font-weight: 700;}
+footer .f_cnt i {display: block; position: absolute; top: 50%; margin-top: -40px; width: 1px; height: 80px; background-color: #555;}
+footer .f_cnt .line1 {left: 560px;}
+footer .f_cnt .line2 {left: 790px;}
+footer .copy {background-color: #222; line-height: 50px; font-size: 12px; text-align: center; text-transform: uppercase;}
+
+

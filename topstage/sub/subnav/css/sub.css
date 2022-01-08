@@ -1,0 +1,54 @@
+/* ---------------------- container ---------------------- */
+#container {padding-bottom: 200px;}
+
+/* ---------------------- submenu ---------------------- */
+/* submenu */
+#submenu .vabou {position: relative; height: 220px; background-image: url(../img/aboutus_bg.jpg);}
+#submenu .svisual h3 {position: absolute; top: 50%; left: 50%; color: #fff; font-size: 30px; font-weight: 700; text-align: center; transform: translate(-50%, -50%);}
+#submenu .svisual .varrow {position: relative;}
+#submenu .svisual .varrow a {margin-top: 85px; width: 30px; height: 50px; text-indent: -9999px;}
+#submenu .svisual .varrow a.aL {float: left; background-image: url(../img/arrowsL.png);}
+#submenu .svisual .varrow a.aR {float: right; background-image: url(../img/arrowsR.png);}
+#submenu .snav {font-size: 14px; line-height: 50px; background-color: #182f59;}
+#submenu .snav ul li {float: left; position: relative; padding: 0 25px; color: #ddd; font-weight: 300; letter-spacing: 1px;}
+#submenu .snav ul li:after {content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 50px; background-image: url(../img/nav_line.jpg);}
+#submenu .snav ul li:last-child:before {content: ""; position: absolute; top: 0; right: 0; width: 2px; height: 50px; background-image: url(../img/nav_line.jpg);}
+#submenu .snav ul li.snav1 {width: 140px;}
+#submenu .snav ul li.snav2 {width: 195px;}
+#submenu .snav ul li.snav3 {width: 160px;}
+.snav1 .navSelect nav {width: 139px;}
+.snav2 .navSelect nav {width: 194px;}
+.snav3 .navSelect nav {width: 159px;}
+.navSelect {position: relative; z-index: 100;}
+.navSelect .selected {display: block; position: relative; padding-right: 15px; color: #fff;}
+.navSelect .selected:after {content: ""; position: absolute; top: 50%; right: 0; margin-top: -5px; width: 5px; height: 5px; border: 1px solid #ddd; border-width: 0 0 1px 1px; transform: rotate(-45deg);}
+.navSelect .selected span {display: block; text-transform: uppercase;}
+.navSelect nav {display: none; overflow: auto; position: absolute; top: 100%; left: -25px; right: 0; color: #aaa; background-color: #fff; border: 1px solid #ddd; border-top: 0;}
+.navSelect nav label {display: block; padding: 25px; line-height: 1; color: #aaa; font-size: 14px; font-weight: 300; text-transform: uppercase;}
+.navSelect nav label+label {padding-top: 0;}
+.navSelect nav label:hover {color: #182f59; font-weight: 700;}
+
+/* checked */
+input:checked~nav {display: block;}
+#anav:checked~.selected:after {margin-top: -2px; border-width: 1px 1px 0 0;}
+#pnav:checked~.selected:after {margin-top: -2px; border-width: 1px 1px 0 0;}
+
+/* content */
+#content {}
+#content h3 {margin-top: 90px; text-align: center; font-size: 40px; font-weight: 700;}
+#content span.subh3 {display: block; margin-bottom: 45px; text-align: center; font-weight: 300;}
+
+/* --------------------------------------------- 1. aboutus --------------------------------------------- */
+.aContent {margin-bottom: -200px;}
+
+/* atab */
+#atab {padding-bottom: -200px;}
+#atab nav {overflow: hidden;}
+#atab nav a {display: block; float: left; width: 300px; line-height: 60px; text-align: center; font-size: 18px; font-weight: 300; border: 1px solid #bababa; text-transform: uppercase;}
+#atab nav a.active {background-color: #f5f5f5; border-bottom: 0;}
+#atab nav a+a {margin-left: -1px; width: 301px;}
+#atab .atabCnt {padding: 100px 0 200px; margin-top: -1px; background-color: #f5f5f5;}
+#atab .atabCnt section {display: none;}
+#atab .atabCnt section:first-child {display: block;}
+#atab .atabCnt section h4 {position: relative; margin-bottom: 100px; color: #182f59; font-size: 35px; font-weight: 700; text-align: center; text-transform: uppercase;}
+#atab .atabCnt section h4:after {content: ""; position: absolute; bottom: -20px; left: 50%; margin-left: -40px; width: 75px; height: 1px; background-color: #999;}

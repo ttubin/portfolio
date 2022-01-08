@@ -1,0 +1,430 @@
+/* --------------------------------------------- reset --------------------------------------------- */
+*, :before, :after {margin: 0; padding: 0; color: inherit; font-size: inherit; font-weight: inherit; text-decoration: inherit; font-style: inherit; border: 0 solid transparent; outline: 0 solid transparent; background: transparent none center center no-repeat; box-sizing: border-box; transition: all 0.5s;}
+ul, ol {list-style: none;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: inherit;}
+input {display: none;}
+label, button, [type=button], [type=submit], [type=reset], a {cursor: pointer;}
+[type=checkbox], [type=radio] {display: none;}
+table {table-layout: fixed; border-collapse: collapse;}
+img {display: block;}
+::selection {color: #fff; background-color: #b74242;}
+
+/* --------------------------------------------- class --------------------------------------------- */
+.clearfix:after {content: ""; display: block; clear: both;}
+.ellipsis {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.hidden {display: none; width: 0; height: 0; visibility: hidden;}
+.inner {position: relative; margin: auto; max-width: 1200px; height: 100%;/* background-color: rgba(0,0,0,0.1);*/}
+.inner:after {content: ""; display: block; clear: both;}
+
+/* --------------------------------------------- modal --------------------------------------------- */
+#modal {display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 410; background-color: rgba(0,0,0,0.8);}
+
+/* --------------------------------------------- wrap --------------------------------------------- */
+#wrap {color: #5c2525; font-family: 'Open Sans', 'Noto Sans KR', sans-serif; font-weight: 300; background-color: #fff; transition: all 0.5s;}
+
+/* --------------------------------------------- header --------------------------------------------- */
+header {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+header nav {z-index: 10;}
+header nav.hdHam {z-index: 400; display: none; position: fixed; top: 3%; left: 93%; width: 30px; height: 20px; transform: rotate(0deg); transition: .5s ease-in-out; cursor: pointer;}
+header nav.hdHam i {display: block; position: absolute; height: 3px; width: 50%; background-color: #5c2525; transform: rotate(0deg); transition: .25s ease-in-out;}
+header nav.hdHam i:nth-child(even) {left: 50%;}
+header nav.hdHam i:nth-child(odd) {left: 0;}
+header nav.hdHam i:nth-child(1), header nav.hdHam i:nth-child(2) {top: 0px;}
+header nav.hdHam i:nth-child(3), header nav.hdHam i:nth-child(4) {top: 10px;}
+header nav.hdHam i:nth-child(5), header nav.hdHam i:nth-child(6) {top: 20px;}
+header nav.hdHam.open i:nth-child(1), header nav.hdHam.open i:nth-child(6) {transform: rotate(45deg);}
+header nav.hdHam.open i:nth-child(2), header nav.hdHam.open i:nth-child(5) {transform: rotate(-45deg);}
+header nav.hdHam.open i:nth-child(1) {top: 5px; left: 3px;}
+header nav.hdHam.open i:nth-child(2) {top: 5px; left: calc(50% - 1px);}
+header nav.hdHam.open i:nth-child(3) {left: -50%; opacity: 0;}
+header nav.hdHam.open i:nth-child(4) {left: 100%; opacity: 0;}
+header nav.hdHam.open i:nth-child(5) {top: 16px; left: 3px;}
+header nav.hdHam.open i:nth-child(6) {top: 16px; left: calc(50% - 1px);}
+header nav.hdNav {display: none; z-index: 350; position: fixed; top: 0; bottom: 0; left: 0; right: 0; padding-top: 40%; color: #b74242; text-align: center; background-color: #fff2e9;}
+header nav.hdNav.active {display: block;}
+header nav.hdNav a {display: block; line-height: 1; font-size: 2.5em; font-family: 'Chewy', cursive;}
+header nav.hdNav a+a {margin-top: 5%;}
+
+
+/* --------------------------------------------- container --------------------------------------------- */
+#container {}
+#container section {}
+#container section h3 {visibility: hidden; font-size: 0;}
+#container nav.cntNav {z-index: 200; position: fixed; top: 5%; left: 50%; margin-left: 5%;}
+#container nav.cntNav i {font-size: 2.188em; font-family: 'Chewy', cursive; opacity: 0.5; cursor: pointer;}
+#container nav.cntNav i.active {opacity: 1;}
+#container nav.cntNav i+i {margin-left: 10%;}
+
+
+/* --------------------------------------------- main --------------------------------------------- */
+#main {background-image: url(../img/main_bg_1.jpg); background-size: cover;}
+#main .minner {padding: 25% 0 15%;}
+#main .mText {line-height: 1; font-size: 5em; font-weight: 100; text-align: right;}
+#main .mText .texting {height: 130px; line-height: 130px; font-weight: 900;}
+
+
+/* --------------------------------------------- aboutme --------------------------------------------- */
+#aboutme {}
+#aboutme .ainner {padding: 10% 0;}
+#aboutme .aPhoto {}
+#aboutme .aPhoto img {}
+#aboutme .aDesc {overflow: hidden;}
+#aboutme .aDesc .about {float: left; margin-top: 3%; line-height: 1; font-weight: 300;}
+#aboutme .aDesc .about h4 {padding-bottom: 5%; font-size: 2.188em; letter-spacing: -1px; font-weight: 900; text-transform: uppercase;}
+#aboutme .aDesc .about ul {float: left; font-size: 1.5em;}
+#aboutme .aDesc .about ul li {margin-bottom: 20px;}
+#aboutme .aDesc .about ul li span {display: inline-block; font-weight: 900;}
+#aboutme .aDesc .profile {width: 40%;}
+#aboutme .aDesc .profile ul.pro1 {width: 30%;}
+#aboutme .aDesc .profile ul.pro2 {width: 70%;}
+#aboutme .aDesc .history {width: 60%;}
+#aboutme .aDesc .history ul.his1 {width: 34%;}
+#aboutme .aDesc .history ul.his1 li:nth-of-type(2) {margin-top: 21%;}
+#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 20%;}
+#aboutme .aDesc .history ul.his2 {width: 66%;}
+#aboutme .aDesc .history ul.his2 li:nth-of-type(1) span,
+#aboutme .aDesc .history ul.his2 li:nth-of-type(4) span {margin-top: 1%;}
+
+
+/* --------------------------------------------- skills --------------------------------------------- */
+#skills {background-color: #fff7f0;}
+#skills .sinner {padding: 13% 0 10%;}
+#skills #barWrap {overflow: hidden; text-transform: uppercase;}
+#skills #barWrap canvas {position: absolute; top: 0; left: 0;}
+#skills #barWrap .barList {float: left; position: relative; width: 30%;}
+#skills #barWrap .barList:not(:nth-child(3n+1)) {margin-left: 5%;}
+#skills #barWrap .barList:nth-child(n+4) {margin-top: 5%;}
+#skills #barWrap .barTitle {position: absolute; top: 30%; left: 50%; font-size: 1.563em; font-weight: 700; letter-spacing: -1px; transform: translateX(-50%);}
+#skills #barWrap .graphFrm {margin: auto; width: 60%;}
+#skills #barWrap .barGraph {position: relative; margin: auto; padding-top: 100%; height: 0;}
+#skills #barWrap .barText {position: absolute; top: 60%; left: 50%; font-size: 1.563em; font-weight: 700; transform: translate(-50%, -50%);}
+#skills #barWrap .barText:after {content:"%";}
+#skills #barWrap .barInfo {margin-top: 16px; font-weight: 300; letter-spacing: -1px; text-align: center;}
+#skills #prgLine {display: none; height: 0; width: 100%;}
+#skills #prgLine .prgList {position: relative;}
+#skills #prgLine .prgList+.prgList {margin-top: 2%;}
+#skills #prgLine .prgList .prgtit {float: left; width: 100%; font-size: 1.563em; font-weight: 700; letter-spacing: -1px; text-transform: uppercase;}
+#skills #prgLine .prgList .prgbar {float: left; margin-top: 1%; width: 90%; height: 1.563em; background-color: #fff;}
+#skills #prgLine .prgList .prgtext {float: left; width: 10%; font-size: 1.875em; text-align: right;}
+#skills #prgLine .prgList .prgtext:after {content: "%";}
+#skills #prgLine .prgList .prgdesc {clear: both; font-size: 1.125em; font-weight: 300;}
+
+
+/* --------------------------------------------- works --------------------------------------------- */
+#works {}
+#works .winner {padding: 14% 0;}
+#works .pop {display: none; overflow-y: auto; z-index: 450; position: fixed; top: 5%; bottom: 5%; left: 50%; margin-left: -40%; width: 80%; background-color: #fff; text-transform: uppercase;}
+#works .pop .close {position: fixed; top: 7%; right: 12%; width: 60px; height: 60px; background-image: url(../img/more_close.png); text-indent: -9999px; cursor: pointer;}
+#works .pop .popInner {padding: 10% 8%; width: 100%; line-height: 1;}
+#works .pop .popInner .tit {position: relative; margin-bottom: 5%; padding-bottom: 5%; font-size: 3.125em; font-weight: 900; text-align: center;}
+#works .pop .popInner .tit:after {content:""; position: absolute; bottom: 0; left: 50%; margin-left: -30px; width: 60px; height: 2px; background-color: #5c2525;}
+#works .pop .popInner .desc {float: left; padding-right: 5%; width: 50%; height: 180px; line-height: 1.5; font-size: 1.25em;}
+#works .pop .popInner .info {float: left; width: 50%; height: 180px; line-height: 1.5; font-size: 1.25em; font-weight: 400;}
+#works .pop .popInner .info .info_tit {float: left; width: 25%; font-weight: 700;}
+#works .pop .popInner .info .detail {float: left;}
+#works .pop .popInner .info .detail span {display: inline-block; width: 15px; height: 15px; border: 1px solid #ddd;}
+#works .pop .popInner .buttonWrap {float: left; position: relative; left: 50%; margin-bottom: 5%; transform: translate(-50%,0);}
+#works .pop .popInner .buttonWrap .site {float: left; width: 250px; height: 70px; line-height: 63px; color: #fff; font-size: 1.2em; background-color: #b74242; text-align: center; border-bottom: 5px solid #5c2525; border-radius: 20px; transition: all 0.1s;}
+#works .pop .popInner .buttonWrap .site:active {transform: translate(0, 5px); border-bottom: 1px solid;}
+#works .pop .popInner .image {background-size: 100%;}
+#works .pop .popInner .image img {width: 100%;}
+#works .slider {position: relative;}
+#works .slider .owl-nav {position: absolute; top: 50%; margin-top: 0; width: 100%; transform: translate(0,-50%);}
+#works .slider .owl-nav button {display: block; position: absolute; top: 0; margin: 0;}
+#works .slider .owl-nav button span {display: block; width: 32px; height: 60px; text-indent: -9999px;}
+#works .slider .owl-nav .owl-prev {left: -5%; background-image: url(../img/work_left.png);}
+#works .slider .owl-nav .owl-prev:hover {background-image: url(../img/work_left_hover.png);}
+#works .slider .owl-nav .owl-next {right: -5%; background-image: url(../img/work_right.png);}
+#works .slider .owl-nav .owl-next:hover {background-image: url(../img/work_right_hover.png);}
+#works .slider .slide {overflow: hidden;}
+#works .slider .slide .workCom {float: right; width: 60%;}
+#works .slider .slide .workCom img {width: 100%;}
+#works .slider .slide .workTxt {float: left; padding-right: 5%; width: 40%; line-height: 1; font-weight: 100; text-transform: uppercase;}
+#works .slider .slide .workTxt .wnum {}
+#works .slider .slide .workTxt .wtit {position: relative; margin-bottom: 10%; padding: 10% 0; font-size: 2.5em; font-weight: 900;}
+#works .slider .slide .workTxt .wtit:after {content: ""; position: absolute; bottom: 0; left: 0; width: 70px; height: 1px; background-color: #5c2525;}
+#works .slider .slide .workTxt .wdesc {line-height: 1.3; font-size: 1.25em;}
+#works .slider .slide .workTxt .wprd {padding: 10% 0 5%;}
+#works .slider .slide .workTxt .wworks {line-height: 1.3; letter-spacing: 1px;}
+#works .slider .slide .workTxt .wmore {float: left; margin-top: 10%; width: 200px; height: 60px; line-height: 53px; color: #fff; font-size: 1.2em; background-color: #b74242; text-align: center; border-bottom: 5px solid #5c2525; border-radius: 20px; transition: all 0.1s;}
+#works .slider .slide .workTxt .wmore:active {transform: translate(0, 5px); border-bottom: 1px solid;}
+
+
+/* --------------------------------------------- contact --------------------------------------------- */
+#contact {background-image: url(../img/contact_bg_1.jpg); background-size: cover;}
+#contact .cinner {padding: 20% 0 15%;}
+#contact .ctext {overflow: hidden; padding-left: 57%; line-height: 1;}
+#contact .ctext .cname {overflow: hidden;}
+#contact .ctext .cname .cname1 {float: left; position: relative; z-index: 10; font-size: 4.375em; font-weight: 900;}
+#contact .ctext .cname .cname1:after {content: ""; z-index: -10; position: absolute; bottom: 0; left: 0; width: 200px; height: 50px; background-color: #ffd5b6;}
+#contact .ctext .cname .cname2 {float: left; padding-left: 4%; font-size: 2.188em; font-family: 'Gochi Hand', cursive;}
+#contact .ctext .cdesc {float: left; padding: 10% 0 5%; line-height: 1.3; font-size: 2.188em; font-weight: 100;}
+#contact .ctext .cinfo {float: left; font-size: 2.188em; font-weight: 100; font-family: 'Noto Sans KR', sans-serif;}
+#contact .ctext .cinfo div {position: relative; padding-left: 22%; line-height: 1.5;}
+#contact .ctext .cinfo div:after {content: ""; position: absolute; top: 50%; left: 0; width: 50px; height: 30px; background-image: url(../img/contact_icon.png); background-size: 40px; transform: translate(0,-50%);}
+
+
+/* --------------------------------------------- media query --------------------------------------------- */
+@media (max-width: 1600px){ /*1600 x 1200*/
+	#container nav.cntNav {margin-left: 0;}
+	#container nav.cntNav i+i {margin-left: 9%;}
+	#main {background-image: url(../img/main_bg_2.jpg);}
+	#main .minner {padding: 30% 0 25%;}
+	#aboutme .ainner {padding: 15% 0;}
+	#skills .sinner {padding: 17% 0;}
+	#works .winner {padding: 21% 0;}
+	#contact {background-image: url(../img/contact_bg_2.jpg);}
+	#contact .cinner {padding: 28% 0 20%;}
+}
+
+@media (max-width: 1366px){ /*1366 x 768*/
+	#container nav.cntNav {margin-left: 4%;}
+	#container nav.cntNav i {font-size: 1.875em;}
+	#container nav.cntNav i+i {margin-left: 7%;}
+	#main {background-image: url(../img/main_bg_6.jpg);}
+	#main .minner {padding: 20% 0 10%;}
+	#main .mText {font-size: 4em;}
+	#main .mText .texting {height: 120px; line-height: 120px;}
+	#aboutme .ainner {padding: 7% 0 4%;}
+	#aboutme .aPhoto {height: 250px;}
+	#aboutme .aPhoto img {height: 100%;}
+	#aboutme .aDesc .about h4 {font-size: 1.875em;}
+	#aboutme .aDesc .about ul {font-size: 1.25em;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2),
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 18%;}
+	#skills .sinner {padding: 8% 0 5%;}
+	#skills #barWrap canvas {width: 200px;}
+	#skills #barWrap .barTitle {font-size: 1.25em;}
+	#skills #barWrap .barTitle,
+	#skills #barWrap .barText {left: 48%;}
+	#works .winner {padding: 10% 0 7%;}
+	#works .pop {margin-left: -45%; width: 90%;}
+	#works .pop .popInner {padding: 7% 3%;}
+	#works .pop .close {right: 6%;}
+	#contact {background-image: url(../img/contact_bg_6.jpg);}
+	#contact .cinner {padding: 20% 0 10%;}
+}
+
+@media (max-width: 1280px){ /*1280 x 1024*/
+	#container nav.cntNav i+i {margin-left: 8%;}
+	#container nav.cntNav i {font-size: 1.875em;}
+	#main {background-image: url(../img/main_bg_2.jpg);}
+	#main .minner {padding: 30% 0 25%;}
+	#main .mText {font-size: 4.5em;}
+	#aboutme .ainner {padding: 13% 0 5%;}
+	#aboutme .aPhoto {height: 300px;}
+	#aboutme .aDesc .about h4 {font-size: 2.188em;}
+	#aboutme .aDesc .about ul {font-size: 1.563em;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2) {margin-top: 20%;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 30%;}
+	#skills .sinner {padding: 18% 0 13%;}
+	#skills #barWrap canvas {width: 210px;}
+	#skills #barWrap .barTitle {font-size: 1.438em;}
+	#skills #barWrap .barTitle,
+	#skills #barWrap .barText {left: 50%;}
+	#works .winner {padding: 20% 0;}
+	#works .pop .popInner .buttonWrap .site {width: 230px; height: 55px; border-radius: 15px; font-size: 1em;}
+	#works .slider .owl-nav .owl-prev {left: 0;}
+	#works .slider .owl-nav .owl-next {right: 0;}
+	#works .slider .slide {margin: auto; width: 90%;}
+	#contact {background-image: url(../img/contact_bg_2.jpg);}
+	#contact .cinner {padding: 30% 0 10%;}
+}
+
+@media (max-width: 1024px){ /*1024 x 768*/
+	#container nav.cntNav {right: 3%}
+	#container nav.cntNav i {font-size: 1.563em;}
+	#main .minner {padding: 30% 3% 20%;}
+	#main {background-image: url(../img/main_bg_3.jpg);}
+	#main .mText {font-size: 3.75em;}
+	#main .mText .texting {height: 110px; line-height: 110px;}
+	#aboutme .ainner {padding: 9% 3%;}
+	#aboutme .aPhoto {height: 250px;}
+	#aboutme .aDesc .about h4 {font-size: 1.875em;}
+	#aboutme .aDesc .about ul {font-size: 1.125em;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2),
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 22%;}
+	#skills .sinner {padding: 12% 0 5%;}
+	#skills #barWrap canvas {width: 180px;}
+	#skills #barWrap .barTitle,
+	#skills #barWrap .barText {font-size: 1.125em;}
+	#works .winner {padding: 17% 3% 10%;}
+	#works .pop {top: 0; bottom: 0; left: 0; margin-left: 0; width: 100%;}
+	#works .pop .close {top: 3%; right: 2%;}
+	#works .pop .popInner .tit {font-size: 2.8em;}
+	#works .pop .popInner .desc,
+	#works .pop .popInner .info {height: 160px; font-size: 1.15em;}
+	#works .pop .popInner .buttonWrap .site {line-height: 50px;}
+	#works .slider .owl-nav {margin-top: -30px;}
+	#works .slider .slide {height: 500px;}
+	#works .slider .slide .workTxt .wtit {font-size: 2.188em;}
+	#works .slider .slide .workTxt .wdesc {font-size: 1.15em;}
+	#works .slider .slide .workTxt .wmore {width: 170px; height: 55px; line-height: 48px; font-size: 1em;}
+	#works .slider .slide .workCom {margin-top: 5%;}
+	#contact {background-image: url(../img/contact_bg_3.jpg);}
+	#contact .cinner {padding: 30% 0 10%;}
+	#contact .ctext .cname .cname1 {font-size: 3.5em;}
+	#contact .ctext .cname .cname1:after {bottom: -10px; width: 160px;}
+	#contact .ctext .cname .cname2 {padding-top: 1%; font-size: 1.875em;}
+	#contact .ctext .cdesc {padding: 8% 0 4%;}
+	#contact .ctext .cdesc,
+	#contact .ctext .cinfo {font-size: 1.875em;}
+}
+
+@media (max-width: 768px){ /*768 x 1024*/
+	header nav.hdHam {display: block;}
+	#container nav.cntNav {display: none;}
+	#container section#aboutme h3,
+	#container section#skills h3,
+	#container section#works h3 {visibility: visible; padding-bottom: 5%; font-size: 1.875em; font-family: 'Chewy', cursive; text-transform: uppercase;}
+	#main {background-image: url(../img/main_bg_4.jpg);}
+	#main .minner {padding: 50% 3%;}
+	#aboutme .ainner {padding: 8% 3% 9%;}
+	#aboutme .aDesc .about h4 {padding-bottom: 3%;}
+	#aboutme .aDesc .profile,
+	#aboutme .aDesc .history {width: 100%;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2),
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 17%;}
+	#skills .sinner {padding: 8% 3% 31%;}
+	#skills #barWrap {height: 0;}
+	#skills #prgLine {display: block;}
+	#works .winner {padding: 8% 2% 9%;}
+	#works .pop .close {width: 30px; height: 30px; background-size: 30px;}
+	#works .pop .popInner .desc,
+	#works .pop .popInner .info {font-size: 0.983em;}
+	#works .pop .popInner .desc {width: 45%;}
+	#works .pop .popInner .info {width: 55%;}
+	#works .slider .owl-nav {display: none;}
+	#works .slider .slide {overflow: none; width: 90%; height: auto;}
+	#works .slider .slide .workCom {margin-top: 0; width: 100%;}
+	#works .slider .slide .workCom img {margin: auto; width: 70%;}
+	#works .slider .slide .workTxt {width: 100%; height: 480px;}
+	#works .slider .slide .workTxt .wnum {display: none;}
+	#works .slider .slide .workTxt .wtit {margin-bottom: 5%; padding: 10% 0 5%;}
+	#works .slider .slide .workTxt .wprd {padding: 5% 0;}
+	#contact {background-image: url(../img/contact_bg_4.jpg);}
+	#contact .cinner {padding: 51% 0 45% 35%;}
+	#contact .ctext {padding-left: 0;}
+	#contact .ctext .cname {width: 100%;}
+	#contact .ctext .cdesc {width: 100%;}
+	#contact .ctext .cinfo {width: 100%;}
+	#contact .ctext .cinfo div {padding-left: 12%;}
+}
+
+@media (max-width: 480px){ /*480 x 800*/
+	header nav.hdHam {left: 90%;}
+	header nav.hdNav a+a {margin-top: 10%;}
+	#main {background-image: url(../img/main_bg_4.jpg);}
+	#main .minner {padding: 60% 3%;}
+	#main .mText {font-size: 3.125em;}
+	#main .mText .texting {height: 100px; line-height: 100px;}
+	#aboutme .ainner {padding: 6% 3% 7%;}
+	#aboutme .aPhoto {height: 200px;}
+	#aboutme .aDesc .about h4 {padding-bottom: 3%; font-size: 1.25em;}
+	#aboutme .aDesc .about ul {font-size: 0.938em;}
+	#aboutme .aDesc .about ul.his1 i {display: none;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2) {margin-top: 25%;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 24%;}
+	#skills .sinner {padding: 6% 3% 32%;}
+	#skills #prgLine .prgList+.prgList {margin-top: 5%;}
+	#skills #prgLine .prgList .prgtit {font-size: 1.25em;}
+	#skills #prgLine .prgList .prgtext {font-size: 1.25em;}
+	#skills #prgLine .prgList .prgdesc {font-size: 0.875em;}
+	#works .winner {padding: 6% 3% 12%;}
+	#works .pop .popInner .desc {margin-top: 2%; height: 130px; font-size: 1.1em;}
+	#works .pop .popInner .desc,
+	#works .pop .popInner .info {width: 100%; height: 100px;}
+	#works .pop .popInner .desc {width: 100%; padding-right: 0;}
+	#works .slider .slide {width: 95%;}
+	#works .slider .slide .workCom img {width: 80%;}
+	#works .slider .slide .workTxt {height: 410px;}
+	#contact .cinner {padding: 46% 0 60%;}
+	#contact .ctext {text-align: center;}
+	#contact .ctext .cname .cname1 {width: 100%; font-size: 3.125em;}
+	#contact .ctext .cname .cname1:after {top: 20%; left: 50%; margin-left: -75px; width: 150px; height: 40px;}
+	#contact .ctext .cname .cname2 {padding-top: 3%; padding-left: 0; width: 100%; font-size: 1.563em; letter-spacing: -1px;}
+	#contact .ctext .cdesc,
+	#contact .ctext .cinfo {font-size: 1.375em;}
+	#contact .ctext .cinfo .cnum {padding-left: 0;}
+	#contact .ctext .cinfo .cmail {padding-left: 9%;}
+	#contact .ctext .cinfo div:after {left: 23%;}
+}
+
+@media (max-width: 414px){ /*414 x 736 (iphone 6 기준)*/
+	#main .minner {padding: 55% 0;}
+	#main .mText {font-size: 2.5em; text-align: center;}
+	#main .mText .texting {height: 80px; line-height: 80px;}
+	#aboutme .ainner {padding: 10% 3%;}
+	#aboutme .aPhoto {height: 180px;}
+	#aboutme .aDesc .about ul li {margin-bottom: 13px;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2) {margin-top: 23%;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 35%;}
+	#skills .sinner {padding: 10% 3% 16%;}
+	#skills #prgLine .prgList .prgbar {width: 88%;}
+	#skills #prgLine .prgList .prgtext {padding-left: 2%;}
+	#works .winner {padding: 10% 3% 8%;}
+	#works .pop .popInner .desc {height: 130px;}
+	#works .slider .slide .workTxt {height: 390px;}
+	#works .slider .slide .workTxt .wtit {font-size: 1.875em;}
+	#works .slider .slide .workTxt .wtit:after {width: 50px;}
+	#works .slider .slide .workTxt .wdesc {line-height: 1.5; font-size: 1em;}
+	#contact .cinner {padding: 44% 0 65%;}
+	#contact .ctext .cinfo div:after {left: 20%;}
+	#contact .ctext .cinfo .cmail {padding-left: 11%;}
+}
+
+@media (max-width: 375px){ /*375 x 812 (iphone X 기준)*/
+	header nav.hdHam {left: 88%;}
+	header nav.hdNav a+a {margin-top: 10%;}
+	#main {background-image: url(../img/main_bg_7.jpg);}
+	#main .minner {padding: 70% 0;}
+	#main .mText {font-size: 2.5em; text-align: center;}
+	#aboutme .ainner {padding: 15% 3% 22%;}
+	#aboutme .aDesc .about ul li {margin-bottom: 15px;}
+	#aboutme .aDesc .profile {margin-top: 5%;}
+	#aboutme .aDesc .history ul {letter-spacing: -1px;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2) {margin-top: 27%;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 40%;}
+	#skills .sinner {padding: 15% 3% 37%;}
+	#skills #prgLine .prgList .prgdesc {letter-spacing: -1px;}
+	#works .winner {padding: 15% 3% 18%;}
+	#works .slider .slide .workTxt .wprd,
+	#works .slider .slide .workTxt .wworks {font-size: 0.875em;}
+	#works .slider .slide .workCom img {width: 100%;}
+	#contact {background-image: url(../img/contact_bg_7.jpg);}
+	#contact .cinner {padding: 55% 0 88%;}
+	#contact .ctext .cinfo div:after {left: 17%; margin-top: 2px;}
+}
+
+@media (max-width: 320px){ /*320 x 568 (iphone se 기준)*/
+	header nav.hdNav {padding-top: 30%;}
+	#main {height: auto !important;background-image: url(../img/main_bg_8.jpg);}
+	#main .minner {padding: 50% 0 90%;}
+	#main .mText {font-size: 1.875em;}
+	#main .mText .texting {height: 60px; line-height: 60px;}
+	#aboutme .ainner {padding: 5% 3%;}
+	#aboutme .aDesc .about ul li {margin-bottom: 13px;}
+	#aboutme .aDesc .history ul.his2 {letter-spacing: -2px;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(2) {margin-top: 30%;}
+	#aboutme .aDesc .history ul.his1 li:nth-of-type(5) {margin-top: 58%;}
+	#skills .sinner {padding: 5% 3% 15%;}
+	#skills #prgLine .prgList .prgbar {width: 85%;}
+	#skills #prgLine .prgList .prgtext {padding-left: 2%;}
+	#skills #prgLine .prgList .prgdesc {letter-spacing: -1px;}
+	#works .winner {padding: 5% 2% 10%;}
+	#works .pop .popInner .tit {margin: 5% 0 7%; padding-bottom: 10%; font-size: 2.188em;}
+	#works .pop .popInner .tit:after {margin-left: -20px; width: 40px;}
+	#works .pop .popInner .desc {font-size: 0.875em;}
+	#works .pop .popInner .info {height: 80px; font-size: 0.813em;}
+	#works .pop .popInner .info ul li:last-child {letter-spacing: -1px;}
+	#works .pop .popInner .buttonWrap {margin-bottom: 10%;}
+	#works .pop .popInner .buttonWrap .site {width: 150px; height: 45px; line-height: 40px; font-size: 0.813em;}
+	#works .slider .slide .workTxt {height: 365px;}
+	#works .slider .slide .workTxt .wmore {width: 150px; height: 50px; line-height: 43px; font-size: 1em; border-radius: 15px;}
+	#contact {background-image: url(../img/contact_bg_8.jpg);}
+	#contact .cinner {padding: 50% 0 51%;}
+	#contact .ctext .cname .cname1 {font-size: 3em;}
+	#contact .ctext .cdesc,
+	#contact .ctext .cinfo {font-size: 1.125em;}
+	#contact .ctext .cinfo div:after {background-size: 30px;}
+}

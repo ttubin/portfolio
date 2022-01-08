@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>TopStage : 고객센터 문의 게시판</title>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Open+Sans:300,400,600,700,800&amp;subset=korean" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/sub.css">
+	<!-- script -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="h_top">
+				<div class="inner">
+					<div class="gnb">
+						<p>language</p>
+						<ul>
+							<li><a href="../index.html" class="korean">Korean</a></li>
+							<li><a href="../index_en.html" class="english">English</a></li>
+						</ul>
+					</div>
+					<!-- /gnb -->
+				</div>
+				<!-- /inner -->
+			</div>
+			<!-- /h_top -->
+
+			<div class="h_cnt">
+				<div class="inner">
+					<h1><a href="../index.html">topstage</a></h1>
+					<!-- /h_logo -->
+
+					<nav>
+						<ul>
+							<li><a href="./aboutus.html">회사소개</a></li>
+							<li><a href="./portfolio.html">포트폴리오</a></li>
+							<li><a href="./product.html">제품소개</a></li>
+							<li><a href="./customer_estimate.html">고객센터</a></li>
+						</ul>
+					</nav>
+					<!-- /nav -->
+				</div>
+				<!-- /inner -->
+			</div>
+			<!-- /h_cnt -->
+		</header>
+		<!-- /header -->
+
+		<!-- container -->
+		<div id="container">
+			<div id="submenu">
+				<div class="svisual vcust">
+					<div class="inner">
+						<h3>고객센터</h3>
+						<div class="varrow">
+							<a href="./product.html" class="aL">제품소개</a>
+							<a href="./aboutus.html" class="aR">회사소개</a>
+						</div>
+					</div>
+				</div>
+				<!-- /stop -->
+
+				<div class="snav snav3">
+					<ul class="inner">
+						<li>홈</li>
+						<li>고객센터</li>
+						<li class="snav3">
+							<div class="navSelect">
+								<input type="checkbox" id="cnav">
+								<input type="radio" name="Rnav" id="cust1">
+								<input type="radio" name="Rnav" id="cust2">
+								<input type="radio" name="Rnav" id="cust3" checked>
+								<label for="cnav" class="selected cSelected"></label>
+
+								<nav>
+									<label for="cust1"><a href="./customer_estimate.html">1:1 견적문의</a></label>
+									<label for="cust2"><a href="./customer_qna.html">자주 묻는 질문</a></label>
+									<label for="cust3"><a href="./customer_board.html">문의 게시판</a></label>
+								</nav>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /smenu -->
+			</div>
+			<!-- /submenu -->
+
+			<div id="content" class="custCnt">
+				<div id="board">
+					<div class="inner">
+						<h3>문의 게시판</h3>
+						<span class="subh3">궁금한점을 남겨주시면 신속하게 답변드리겠습니다.</span>
+
+						<div class="boardcnt">
+							<div class="bDesc">
+								<!-- <div class="bTit">문의 게시판</div> -->
+								<p class="bTime1">상담시간</p>
+								<p class="bTime2">평일 (월~금) 10:00 ~ 18:00</p>
+								<p class="bTime3">(Off-time 12:00 - 14:00, 토/일/공휴일 휴무)</p>
+								<p class="bTime4">※ 한번 등록한 상담내용은 수정이 불가능합니다.</p>
+							</div>
+
+							<div class="bCnt">
+								<div id="cusBoard">
+									<div class="cusBar">
+										<!-- <span class="total"> total : <b>123</b></span> -->
+										<div class="cusSearch">
+											<input type="checkbox" id="cusnav">
+											<input type="radio" name="Rnav" id="custo1">
+											<input type="radio" name="Rnav" id="custo2">
+											<input type="radio" name="Rnav" id="custo3">
+											<input type="radio" name="Rnav" id="custo4">
+											<label for="cusnav" class="cusS"><span>전체</span></label>
+											<nav>
+												<label for="custo1">전체</label>
+												<label for="custo2">글쓴이</label>
+												<label for="custo3">제목</label>
+												<label for="custo4">내용</label>
+											</nav>
+											<input type="text" placeholder="입력해주세요.">
+											<a href="javascript:;" class="cusBtn">찾기</a>
+										</div>
+									</div>
+									<!-- /cusBar -->
+
+									<table summary="topstage board" class="cusTable">
+										<caption>게시판 목록</caption>		
+										<thead>
+											<tr>
+												<th scope="col" class="idx">번호</th>
+												<th scope="col" class="subject">제목</th>
+												<th scope="col" class="author">작성자</th>
+												<th scope="col" class="date">작성일</th>
+												<th scope="col" class="hit">조회</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="idx">1</td>
+												<td class="subject">탑스테이지 홈페이지 오픈하였습니다.</td>
+												<td class="author">관리자</td>
+												<td class="date">2019. 01. 11</td>
+												<td class="hit">123</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- /cusTable -->
+
+									<div class="cusPage">
+										<ul>
+											<li class="prev"><a href="javascript:;"></a></li>
+											<li class="current">1</li>
+											<li><a href="javascript:;" >2</a></li>
+											<li class="next"><a href="javascript:;"></a></li>
+										</ul>
+									</div>
+									<!-- /cusPage -->
+
+									<a href="javascript:;" class="writeBtn">글쓰기</a>
+									<!-- /writeBtn -->
+								</div>
+								<!-- /cusBoard -->
+							</div>
+						</div>
+						<!-- /boardcnt -->
+					</div>
+				</div>
+				<!-- /board -->
+			</div>
+			<!-- /content -->
+		</div>
+		<!-- /container -->
+
+		<!-- footer -->
+		<footer>
+			<div class="f_cnt">
+				<div class="inner">
+					<h2>topstage</h2>
+					<!-- /f_logo -->
+
+					<address>
+						<ul>
+							<li>회사명</li>
+							<li>대표</li>
+							<li>전화/팩스</li>
+							<li>이메일</li>
+							<li>주소</li>
+						</ul>
+						<ul>
+							<li>탑스테이지</li>
+							<li>정문선</li>
+							<li>031-543-7405</li>
+							<li>jms9222@hanmail.net</li>
+							<li>경기도 포천시 가산면 마산리 645-24</li>
+						</ul>
+					</address>
+					<!-- /address -->
+
+					<i class="line1"></i>
+					<!-- /line -->
+
+					<ul class="link">
+						<li><a href="./aboutus.html">회사소개</a></li>
+						<li><a href="./portfolio.html">포트폴리오</a></li>
+						<li><a href="./product.html">제품소개</a></li>
+						<li><a href="./customer.html">고객센터</a></li>
+						<li><a href="javascript:;">이용약관</a></li>
+						<li><a href="javascript:;">개인정보처리방침</a></li>
+					</ul>
+					<!-- /link -->
+
+					<i class="line2"></i>
+					<!-- /line -->
+
+					<ul class="customer">
+						<li class="c_icon">상담안내</li>
+						<li class="c_number">031) 543-7405</li>
+						<li>영업시간 09:00 - 18:00</li>
+						<li>주말 및 공휴일 휴무</li>
+					</ul>
+					<!-- /customer -->
+				</div>
+				<!-- /inner -->
+			</div>
+			<!-- /f_cnt -->
+
+			<div class="copy">
+				<div class="inner">
+					<span>copyright ⓒ 2018 topstage. all right reserved.</span>
+				</div>
+			</div>
+			<!-- /copy -->
+		</footer>
+		<!-- /footer -->
+	</div>
+
+	<script type="text/javascript">
+		$('.cusS').click(function(){
+			$('.cusSearch nav').toggle();
+		});
+
+		$('.cusSearch nav label').click(function(){ // 노드 제대로 설정하자^^
+			var idx = $(this).index();
+			$('.cusSearch nav').hide(); // toggle()을 써줘도 됨
+			$('input#cusnav').prop('checked',false);
+
+			var txt = $('.cusSearch nav label')[idx].textContent;
+			$('.cusSearch .cusS span').text(txt);
+		});
+	</script>
+</body>
+</html>

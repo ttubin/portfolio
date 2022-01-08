@@ -1,0 +1,105 @@
+/* --------------------------------------------- container --------------------------------------------- */
+#container {}
+
+/* visual */
+#visual {position: relative;}
+#visual .slider {overflow: hidden; position: relative; height: 640px;}
+#visual .slider .owl-nav {position: absolute; top: 50%; left: 50%; margin-top: -25px;}
+#visual .slider .owl-nav button {position: absolute;}
+#visual .slider .owl-nav button:nth-child(1) {margin-left: -670px;}
+#visual .slider .owl-nav button:nth-child(2) {margin-left: 640px;}
+#visual .slider .owl-nav button span {display: block; width: 30px; height: 50px; text-indent: -9999px; background-image: url(../img/main/arrows.png);}
+#visual .slider .owl-nav .owl-prev span {background-position: 0 0;}
+#visual .slider .owl-nav .owl-next span {background-position: -30px 0;}
+#visual .slider .owl-dots {position: absolute; bottom: 10px; left: 50%; transform: translate(-50%,0);}
+#visual .slider .owl-dots span {display: block; position: relative; z-index: 20; margin: 0 5px; width: 15px; height: 15px; border-radius: 50%; background-color: #fff;}
+#visual .slider .owl-dots .active span {background-color: #399ac8;}
+#visual .slider .item {position: relative; background-color: #000;}
+#visual .slider .item .visualBg {height: 650px; text-indent: -9999px; background-size: cover;}
+#visual .slider .item.bg1 .visualBg {background-image: url(../img/main/visual01.jpg);}
+#visual .slider .item.bg2 .visualBg {background-image: url(../img/main/visual02.jpg);}
+#visual .slider .item.bg3 .visualBg {background-image: url(../img/main/visual03.jpg);}
+#visual .slider .item .visualTxt {position: absolute; top: 0; left: 50%; margin: 60px 0 0 -600px;}
+#visual .slider .item .visualTxt .vTop {color: #fff; font-size: 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+#visual .slider .item .visualTxt .vTop .mark {color: #41b5e3;}
+#visual .slider .item .visualTxt .vBtm {position: relative; margin-top: 80px; color: #fff; font-size: 20px; font-weight: 300;}
+#visual .slider .item .visualTxt .vBtm:before {content: ""; position: absolute; top: -40px; left: 0; width: 50px; height: 2px; background-color: #eee;}
+#visual .slider .item .visualTxt .vBtn {float: left; display: block; margin-bottom: 60px; margin-top: 60px; padding: 10px 30px; color: #fff; text-align: center; font-size: 12px; font-weight: 600; background-color: #41b5e3; letter-spacing: 1px; text-transform: uppercase;}
+#visual .slider .item .visualTxt .vBtn:hover {color: #41b5e3; background-color: #fff;}
+
+/* sliderCnt */
+#visual .sliderCnt {z-index: 10; position: absolute; bottom: 0; left: 50%; margin-left: -600px; color: #fff; font-weight: 300; text-transform: uppercase;}
+#visual .sliderCnt .quick {margin-bottom: 60px;}
+#visual .sliderCnt .quick ul {overflow: hidden; width: 100%; height: 100%;}
+#visual .sliderCnt .quick ul li {float: left; width: 575px; height: 160px; background-color: #399ac8;}
+#visual .sliderCnt .quick ul li+li {margin-left: 50px;}
+#visual .sliderCnt .quick ul li .icon {float: left; position: relative; margin: 45px; width: 70px; height: 70px; text-indent: -9999px; background-image: url(../img/main/quick.png); background-position-x: 0;}
+#visual .sliderCnt .quick ul li .icon:after {content: ""; position: absolute; top: 10px; right: -40px; width: 1px; height: 50px; background-color: #c5d1e8;}
+#visual .sliderCnt .quick ul li.design .icon {background-position-y: 0;}
+#visual .sliderCnt .quick ul li.consulte .icon {background-position-y: -70px;}
+#visual .sliderCnt .quick ul li .summary {float: right; width: 315px; margin: 20px 70px 0 0;}
+#visual .sliderCnt .quick ul li .summary .sTit {margin-bottom: 5px; font-size: 16px; font-weight: 700; text-transform: uppercase;}
+#visual .sliderCnt .quick ul li .summary .sCnt {font-size: 13px; color: #c5d1e8; line-height: 1.7; font-family: '맑은고딕', sans-serif; letter-spacing: -1px;}
+
+
+
+/* ---------------------- content ---------------------- */
+/* business */
+#business {margin-bottom: 100px; position: relative; height: 600px; background-color: #182f59;}
+#business .bTit {float: left; padding: 100px 0 219px; width: 300px; background-color: #182f59; background-image: url(../img/main/business_tit_bg.png); background-position: 0 100%;}
+#business .bTit h3 {font-size: 40px; color: #fff;}
+#business .bTit .bInfo {margin-top: 30px; padding-right: 50px; color: #788eb7; font-size: 16px;}
+#business .bTit .bMore {display: block; float: left; margin-top: 40px; padding: 5px 25px; color: #fff; font-size: 14px; border: 1px solid #fff;}
+#business .bTit .bMore:hover {color: #182f59; font-weight: 700; background-color: #fff;}
+#business .bCnt {position: absolute; top: 0; bottom: 0; left: 50%; right: 0; margin-left: -300px; background-image: url(../img/main/business_bg.jpg);}
+#business .bCnt .inner {margin-left: 0;}
+#business .bCnt ul {overflow: hidden; margin-top: 75px; padding-top: 60px; padding-left: 170px; width: 900px; height: 450px; background-color: #fff;}
+#business .bCnt ul li {float: left; width: 300px; height: 150px;}
+#business .bCnt ul li:nth-child(n+3) {padding-top: 30px;}
+#business .bCnt ul li .desc .dTit {padding: 5px 0; color: #000;}
+#business .bCnt ul li .desc .dStory {color: #848484;}
+
+/* video */
+#video {position: relative; margin-bottom: 100px;}
+#video h3 {margin-bottom: 60px; font-size: 40px; font-weight: 700; text-align: center;}
+#video .vDesc {float: left; padding-right: 40px; width: 470px; font-weight: 300; letter-spacing: 1px;}
+#video .vDesc .vicon {display: block; margin: 20px 0 35px; width: 80px; height: 55px; text-indent: -9999px; background-image: url(../img/main/quote.png);}
+#video .vDesc p {font-size: 24px;}
+#video .vDesc p span {line-height: 2; font-size: 30px; font-weight: 700;}
+#video .vDesc .videoBtn {float: left; display: block; margin: 50px 0 100px; padding: 5px 25px; color: #182f5a; font-size: 14px; font-weight: 500; border: 1px solid #182f5a; letter-spacing: 0;}
+#video .vDesc .videoBtn:hover {color: #fff; background-color: #182f5a;}
+#video .videoArea {position: absolute; top: 119px; bottom: 0; left: 50%; right: 0; margin-left: -130px; background-image: url(../img/main/video.jpg);}
+
+/* portfolio */
+#portfolio {}
+#portfolio h3 {margin-bottom: 60px; font-size: 40px; font-weight: 700; text-align: center;}
+#portfolio ul {overflow: hidden;}
+#portfolio ul li {float: left; position: relative; width: 25%; height: 650px; background-size: cover;}
+#portfolio ul li:hover a {box-shadow: 30px 0 50px rgba(0,0,0,0.5) inset; z-index: 2;}
+#portfolio ul li:not(:hover) a {background-color: rgba(0,0,0,0.5);  z-index: 1;}
+#portfolio ul li.port1 {background-image: url(../img/main/port1.jpg);}
+#portfolio ul li.port2 {background-image: url(../img/main/port2.jpg);}
+#portfolio ul li.port3 {background-image: url(../img/main/port3.jpg);}
+#portfolio ul li.port4 {background-image: url(../img/main/port4.jpg);}
+#portfolio ul li a {display: block; position: relative; width: 100%; height: 100%; color: #fff; text-align: center;}
+#portfolio ul li a span {display: block;}
+#portfolio ul li a .p_info {position: absolute; top: 50%; left: 50%; margin: -150px 0 0 -140px; width: 280px; height: 300px;}
+#portfolio ul li a .p_info strong {display: block; clear: both;}
+#portfolio ul li a .p_info span {display: block; font-size: 20px; font-weight: 100;}
+#portfolio ul li a .p_info .p_tit {font-size: 35px; margin-bottom: 60px; letter-spacing: -1px;}
+#portfolio ul li a .p_info .p_more {float: left; position: absolute; bottom: 0; left: 50%; margin-left: -51px; width: 100px; line-height: 30px; font-size: 13px; border: 1px solid #ddd;}
+#portfolio ul li a .p_info .p_more:before {content: "더보기";}
+#portfolio ul li:hover a .p_info .p_more {color: #000; font-weight: 700; background-color: #fff;}
+
+/* banner */
+.banner {height: 110px; background-color: #e6e7e9;}
+.banner ul {overflow: hidden; padding: 5px 0 0 65px;}
+.banner ul li {float: left;}
+.banner ul li:nth-child(n+2) {padding-top: 20px;}
+.banner ul li+li {padding-left: 130px;}
+
+
+
+/* --------------------------------------------- keyframes --------------------------------------------- */
+
+/* --------------------------------------------- mediaquery --------------------------------------------- */
