@@ -1,0 +1,60 @@
+/* IMPORT */
+/* FONT */
+@font-face {
+  font-family: "Boris";
+  src: url("../../public/fonts/Boris.ttf");
+}
+@font-face {
+  font-family: "pretendard";
+  src: url("../../public/fonts/PretendardVariable.woff2");
+}
+@font-face {
+  font-family: "inter";
+  src: url("../../public/fonts/Inter-VariableFont_opsz,wght.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/fonts/Poppins-Regular.ttf");
+}
+/* RESET */
+:root {
+  --font-boris: "Boris", sans-serif;
+  --font-pretendard: "pretendard", sans-serif;
+  --font-inter: "inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --main-mint: #c2d8c4;
+  --main-gray: #333333;
+  --main-white: #ffffff;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: font-size 0.4s;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--main-mint);
+  font-family: var(--font-poppins);
+  background-color: var(--main-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}/*# sourceMappingURL=global.css.map */

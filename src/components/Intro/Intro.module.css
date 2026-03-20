@@ -1,0 +1,43 @@
+/* INTRO */
+.intro {
+  padding: 8rem 4rem;
+}
+.intro .text__l {
+  margin-top: 8rem;
+  line-height: 10rem;
+  font-size: 10rem;
+  text-transform: uppercase;
+}
+.intro .text__l p {
+  position: relative;
+  padding-left: 15rem;
+}
+.intro .text__l p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 13.2rem;
+  height: 0.6rem;
+  background-color: var(--main-mint);
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+.intro .text__m {
+  margin-top: 2rem;
+  line-height: 4rem;
+  font-size: 2.4rem;
+  font-family: var(--font-boris);
+}
+.intro .text__s {
+  margin-top: 8rem;
+  line-height: 6rem;
+  font-size: 4rem;
+  font-family: var(--font-pretendard);
+  font-weight: 500;
+}
+.intro .text__s span {
+  display: block;
+  font-weight: 300;
+  opacity: 0.8;
+}/*# sourceMappingURL=Intro.module.css.map */

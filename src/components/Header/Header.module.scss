@@ -1,0 +1,70 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+
+  a {
+    display: block;
+    color: #c2d8c4;
+    font-size: 2rem;
+    font-family: var(--font-boris);
+
+    &.name {
+      font-weight: bold;
+    }
+
+    &.mail {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0.1rem;
+        background-color: #c2d8c4;
+      }
+    }
+  }
+
+  .toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 8rem;
+    color: var(--main-mint);
+    line-height: 3.2rem;
+    font-size: 2rem;
+    font-family: var(--font-pretendard);
+    font-weight: 300;
+    text-align: center;
+    background-color: rgba(40, 40, 40, 0.6);
+    border-radius: 1.6rem;
+    transform: translate(-50%, -50%);
+    animation: fadeInOut 2s ease forwards;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
