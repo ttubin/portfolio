@@ -2,26 +2,25 @@
 .intro {
   padding: 8rem 4rem;
 }
-.intro .text__l {
+.intro .title {
   margin-top: 8rem;
   line-height: 10rem;
   font-size: 10rem;
   text-transform: uppercase;
 }
-.intro .text__l p {
-  position: relative;
-  padding-left: 15rem;
+.intro .title__web {
+  display: block;
 }
-.intro .text__l p::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 13.2rem;
+.intro .title__dash {
+  display: inline-block;
+  position: relative;
+  width: 22.4rem;
   height: 0.6rem;
   background-color: var(--main-mint);
-  transform: translateY(-50%);
-  opacity: 0.8;
+  transform-origin: left center;
+}
+.intro .title__portfolio {
+  padding-left: 24rem;
 }
 .intro .text__m {
   margin-top: 2rem;

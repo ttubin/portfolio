@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 

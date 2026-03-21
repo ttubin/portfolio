@@ -2,31 +2,34 @@
 .intro {
   padding: 8rem 4rem;
 
-  .text {
-    &__l {
-      margin-top: 8rem;
-      line-height: 10rem;
-      font-size: 10rem;
-      text-transform: uppercase;
+  .title {
+    margin-top: 8rem;
+    line-height: 10rem;
+    font-size: 10rem;
+    text-transform: uppercase;
 
-      p {
-        position: relative;
-        padding-left: 15rem;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 0;
-          width: 13.2rem;
-          height: 0.6rem;
-          background-color: var(--main-mint);
-          transform: translateY(-50%);
-          opacity: 0.8;
-        }
-      }
+    &__web {
+      display: block;
     }
 
+    &__dash {
+      display: inline-block;
+      position: relative;
+      // top: 50%;
+      // left: 0;
+      width: 22.4rem;
+      height: 0.6rem;
+      background-color: var(--main-mint);
+      // transform: translateY(-50%);
+      transform-origin: left center;
+    }
+
+    &__portfolio {
+      padding-left: 24rem;
+    }
+  }
+
+  .text {
     &__m {
       margin-top: 2rem;
       line-height: 4rem;
