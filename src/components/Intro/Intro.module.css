@@ -13,14 +13,10 @@
 }
 .intro .title__dash {
   display: inline-block;
-  position: relative;
   width: 22.4rem;
   height: 0.6rem;
   background-color: var(--main-mint);
   transform-origin: left center;
-}
-.intro .title__portfolio {
-  padding-left: 24rem;
 }
 .intro .text__m {
   margin-top: 2rem;

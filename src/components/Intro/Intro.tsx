@@ -39,13 +39,13 @@ export default function Intro() {
       .from(
         dashRef.current,
         {
-          opacity: 0,
-          scaleX: 1,
-          transformOrigin: "left center",
-          duration: 0.5,
+          scaleX: 0,
+          // opacity: 1,
+          duration: 0.6,
           ease: "power2.out",
+          // transformOrigin: "left center",
         },
-        "-=0.4",
+        "-=0.8",
       )
       .from(
         portfolioChars,
