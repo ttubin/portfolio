@@ -32,7 +32,9 @@
 
   --main-mint: #c2d8c4;
   --main-gray: #333333;
-  --main-white: #ffffff;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
 
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
@@ -51,9 +53,9 @@ html {
 }
 
 body {
-  color: var(--main-mint);
+  color: var(--color-black);
   font-family: var(--font-poppins);
-  background-color: var(--main-gray);
+  background-color: var(--color-white);
 }
 
 a {

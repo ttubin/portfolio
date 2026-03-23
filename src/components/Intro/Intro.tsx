@@ -17,13 +17,13 @@ export default function Intro() {
 
   const webRef = useRef<HTMLSpanElement | null>(null);
   const dashRef = useRef<HTMLSpanElement | null>(null);
-  const portfolioRef = useRef<HTMLSpanElement | null>(null);
+  const devRef = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
-    if (!webRef.current || !portfolioRef.current) return;
+    if (!webRef.current || !devRef.current) return;
 
     const webChars = webRef.current.querySelectorAll(".char");
-    const portfolioChars = portfolioRef.current.querySelectorAll(".char");
+    const devChars = devRef.current.querySelectorAll(".char");
 
     const tl = gsap.timeline();
 
@@ -40,15 +40,13 @@ export default function Intro() {
         dashRef.current,
         {
           scaleX: 0,
-          // opacity: 1,
           duration: 0.6,
           ease: "power2.out",
-          // transformOrigin: "left center",
         },
-        "-=0.8",
+        "-=0.9",
       )
       .from(
-        portfolioChars,
+        devChars,
         {
           y: 100,
           opacity: 0,
@@ -58,7 +56,7 @@ export default function Intro() {
           duration: 1,
           ease: "power3.out",
         },
-        "-=0.3",
+        "-=0.7",
       );
   }, []);
 
@@ -69,15 +67,15 @@ export default function Intro() {
           {splitText("web")}
         </span>
         <span ref={dashRef} className={styles.title__dash}></span>
-        <span ref={portfolioRef} className={styles.title__portfolio}>
+        <span ref={devRef} className={styles.title__dev}>
           {splitText("portfolio")}
         </span>
       </h1>
       <p className={`${styles.text} ${styles.text__m}`}>Frontend-focused Web Publisher</p>
       <p className={`${styles.text} ${styles.text__s}`}>
-        6년 이상의 UI 퍼블리싱 경험으로 <br />
-        모바일 인앱, 디지털 카탈로그, 반응형 웹을 구축해왔습니다. <br />
-        <span>사용자 경험을 고려한 UI 퍼블리싱을 지향합니다.</span>
+        <span>6년 이상의 UI 퍼블리싱 경험</span>으로 <br />
+        <span>모바일 인앱, 디지털 카탈로그, 반응형 웹을 구축</span>해왔습니다. <br />
+        사용자 경험을 고려한 UI 퍼블리싱을 지향합니다.
       </p>
     </section>
   );

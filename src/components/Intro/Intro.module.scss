@@ -14,15 +14,17 @@
 
     &__dash {
       display: inline-block;
-      // position: relative;
-      // top: 50%;
-      // left: 0;
-      width: 22.4rem;
-      height: 0.6rem;
-      background-color: var(--main-mint);
 
+      width: 22.4rem;
+      height: 0.3rem;
+      background-color: var(--color-black);
       transform-origin: left center;
-      // transform: translateY(-50%);
+      opacity: 0.6;
+    }
+
+    &__dev {
+      display: inline-block;
+      margin-left: -0.6rem;
     }
   }
 
@@ -39,12 +41,11 @@
       line-height: 6rem;
       font-size: 4rem;
       font-family: var(--font-pretendard);
-      font-weight: 500;
+      font-weight: 100;
 
       span {
-        display: block;
-        font-weight: 300;
-        opacity: 0.8;
+        display: inline-block;
+        font-weight: 500;
       }
     }
   }
