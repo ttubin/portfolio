@@ -1,0 +1,30 @@
+/* PAGE */
+.wrap {
+  width: 100%;
+  height: 100%;
+  // background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  // background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  // background-image: linear-gradient(-225deg, #69eacb 0%, #eaccf8 48%, #6654f1 100%);
+  background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 4.5s linear infinite alternate;
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 10% 10%;
+    }
+    100% {
+      background-position: 90% 90%;
+    }
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+  }
+}

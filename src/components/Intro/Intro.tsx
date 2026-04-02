@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import styles from "./Intro.module.scss";
 
 export default function Intro() {
-  // 타이틀 글자 하나씩 분리하여 애니메이션
+  // 타이틀 글자 하나씩 분리하여 나타나는 애니메이션
   const splitText = (text: string) => {
     return text.split("").map((char: string, i: number) => (
       <span key={`${char}-${i}`} className="char">
