@@ -1,6 +1,9 @@
 export type Project = {
+  num: number;
+  type: string;
   title: string;
-  description: string;
+  desc: string;
+  image: string;
   period: string;
   stack: string[];
   role: string;

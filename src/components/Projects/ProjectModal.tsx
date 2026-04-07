@@ -14,7 +14,7 @@ export default function ProjectModal({ project, onClose }: Props) {
     <div className="modal">
       <div className="modal-content">
         <h2>{project.title}</h2>
-        <p>{project.description}</p>
+        <p>{project.desc}</p>
         <p>{project.period}</p>
         <p>{project.role}</p>
 
