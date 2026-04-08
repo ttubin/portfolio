@@ -100,6 +100,7 @@
   font-size: 3.2rem;
   font-weight: 900;
 }
+.projects .scrollSection .wrapper .cards .card__text .date,
 .projects .scrollSection .wrapper .cards .card__text .desc,
 .projects .scrollSection .wrapper .cards .card__text .role,
 .projects .scrollSection .wrapper .cards .card__text .link {
@@ -115,11 +116,9 @@
   display: block;
   position: relative;
   padding-left: 2.4rem;
-  cursor: pointer;
-}
-.projects .scrollSection .wrapper .cards .card__text .link:hover {
   font-weight: 600;
   text-decoration: underline;
+  cursor: pointer;
 }
 .projects .scrollSection .wrapper .cards .card__text .link::before {
   content: "🌐";

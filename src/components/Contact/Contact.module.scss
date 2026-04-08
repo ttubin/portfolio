@@ -1,3 +1,5 @@
+@use "@/styles/_mixins" as *;
+
 /* CONTACT */
 .contact {
   display: flex;
@@ -10,6 +12,16 @@
   height: 100vh;
   background-color: var(--main-mint);
 
+  // common
+  .web {
+    display: block !important;
+  }
+
+  .mob {
+    display: none !important;
+  }
+
+  // summary
   .title {
     width: 100%;
 
@@ -32,7 +44,7 @@
     }
   }
 
-  .desc {
+  .content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -149,6 +161,69 @@
       }
       100% {
         opacity: 0;
+      }
+    }
+  }
+
+  // media query
+  @include tablet {
+    // common
+    .web {
+      display: none !important;
+    }
+
+    .mob {
+      display: block !important;
+    }
+
+    // summary
+    .title {
+      .text {
+        p {
+          line-height: 7.2rem;
+          font-size: 4.8rem;
+        }
+      }
+    }
+
+    .content {
+      p {
+        line-height: 3.6rem;
+        font-size: 2.4rem;
+      }
+
+      .bubble {
+        left: -1.2rem;
+      }
+    }
+  }
+
+  @include mobile {
+    // summary
+    padding: 0.8rem 2rem 2rem;
+
+    .title {
+      .text {
+        p {
+          line-height: 6.4rem;
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    .content {
+      p {
+        line-height: 3.2rem;
+        font-size: 2rem;
+      }
+
+      .bubble {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.2rem;
+
+        &::before {
+          left: 2.6rem;
+        }
       }
     }
   }

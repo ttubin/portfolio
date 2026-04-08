@@ -57,8 +57,11 @@ export default function Contact() {
         </div>
         <span className={styles.line}></span>
       </div>
-      <div className={styles.desc}>
-        <p className={styles.bubble}>마우스를 올려 보세요! 👀</p>
+      <div className={styles.content}>
+        <p className={styles.bubble}>
+          <span className={styles.web}>마우스를 올려 보세요! 👀</span>
+          <span className={styles.mob}>터치 해보세요! 👀</span>
+        </p>
         <ul className={styles.info}>
           <li onMouseEnter={() => setActive("mail")} onMouseLeave={() => setActive(null)} onClick={() => handleCopy("ttubiny@gmail.com", "Email")}>
             <p className={styles.icon}>📧</p>

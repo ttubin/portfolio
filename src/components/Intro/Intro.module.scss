@@ -1,3 +1,5 @@
+@use "@/styles/_mixins" as *;
+
 /* INTRO */
 .intro {
   display: flex;
@@ -10,6 +12,16 @@
   height: 100vh;
   background-color: var(--main-mint);
 
+  // common
+  .web {
+    display: block !important;
+  }
+
+  .mob {
+    display: none !important;
+  }
+
+  // summary
   .title {
     width: 100%;
 
@@ -32,7 +44,7 @@
     }
   }
 
-  .desc {
+  .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +57,56 @@
       font-family: var(--font-pretendard);
       font-weight: 900;
       text-transform: uppercase;
+    }
+  }
+
+  // media query
+  @include tablet {
+    // common
+    .web {
+      display: none !important;
+    }
+
+    .mob {
+      display: block !important;
+    }
+
+    // summary
+    .title {
+      .text {
+        p {
+          line-height: 7.2rem;
+          font-size: 4.8rem;
+        }
+      }
+    }
+
+    .content {
+      p {
+        line-height: 3.6rem;
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  @include mobile {
+    // summary
+    padding: 0.8rem 2rem 2rem;
+
+    .title {
+      .text {
+        p {
+          line-height: 6.4rem;
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    .content {
+      p {
+        line-height: 3.2rem;
+        font-size: 2rem;
+      }
     }
   }
 }

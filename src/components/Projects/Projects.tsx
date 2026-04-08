@@ -54,14 +54,6 @@ export default function Projects() {
                 <ProjectCard project={project} onClick={() => setSelected(project)} />
               </li>
             ))}
-            {/* <li className={styles.card}>Project 1</li>
-            <li className={styles.card}>Project 2</li>
-            <li className={styles.card}>Project 3</li>
-            <li className={styles.card}>Project 4</li>
-            <li className={styles.card}>Project 5</li>
-            <li className={styles.card}>Project 6</li>
-            <li className={styles.card}>Project 7</li>
-            <li className={styles.card}>Project 8</li> */}
           </ul>
         </div>
       </div>

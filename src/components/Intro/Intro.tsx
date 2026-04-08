@@ -47,7 +47,7 @@ export default function Intro() {
         </div>
         <span className={styles.line}></span>
       </div>
-      <div className={styles.desc}>
+      <div className={styles.content}>
         <p className={styles.year}>2026</p>
         <p className={styles.text}>portfolio</p>
       </div>

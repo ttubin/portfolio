@@ -17,13 +17,14 @@ export default function ProjectCard({ project, onClick }: Props) {
       <div className={styles.card__text}>
         <p className={styles.type}>{project.type}</p>
         <p className={styles.name}>{project.title}</p>
+        <p className={styles.date}>{project.period}</p>
+        <p className={styles.role}>{project.role}</p>
         <p className={styles.desc}>{project.desc}</p>
         {project.link && (
           <Link href={project.link} target="_blank" className={styles.link}>
             URL
           </Link>
         )}
-        <p className={styles.role}>{project.role}</p>
       </div>
       <div className={styles.card__img}>
         <Image src={project.image} alt={project.title} fill={true} priority />
