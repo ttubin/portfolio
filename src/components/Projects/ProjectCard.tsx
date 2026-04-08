@@ -20,7 +20,7 @@ export default function ProjectCard({ project, onClick }: Props) {
         <p className={styles.desc}>{project.desc}</p>
         {project.link && (
           <Link href={project.link} target="_blank" className={styles.link}>
-            URL 보러가기
+            URL
           </Link>
         )}
         <p className={styles.role}>{project.role}</p>
