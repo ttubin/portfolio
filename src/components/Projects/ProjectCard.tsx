@@ -2,6 +2,7 @@
 
 import { Project } from "@/types/project";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./Projects.module.scss";
 
@@ -17,6 +18,11 @@ export default function ProjectCard({ project, onClick }: Props) {
         <p className={styles.type}>{project.type}</p>
         <p className={styles.name}>{project.title}</p>
         <p className={styles.desc}>{project.desc}</p>
+        {project.link && (
+          <Link href={project.link} target="_blank" className={styles.link}>
+            URL 보러가기
+          </Link>
+        )}
         <p className={styles.role}>{project.role}</p>
       </div>
       <div className={styles.card__img}>

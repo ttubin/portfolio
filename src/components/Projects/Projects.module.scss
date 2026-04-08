@@ -76,8 +76,9 @@
             padding: 4rem;
             padding-top: 2rem;
             background: linear-gradient(to top, rgba(194, 216, 196, 1) 0%, rgba(194, 216, 196, 0) 100%);
-            opacity: 0;
+            // opacity: 0;
             transition: opacity 0.4s;
+            cursor: default;
 
             .type {
               display: inline-block;
@@ -92,9 +93,6 @@
               &::after {
                 content: "";
                 position: absolute;
-                // top: 50%;
-                // left: 100%;
-                // margin-left: 1.2rem;
                 bottom: 0;
                 left: 0;
                 width: 100%;
@@ -111,7 +109,8 @@
             }
 
             .desc,
-            .role {
+            .role,
+            .link {
               line-height: 2.8rem;
               font-size: 1.8rem;
               font-weight: 400;
@@ -120,6 +119,27 @@
 
             .desc {
               word-break: keep-all;
+            }
+
+            .link {
+              display: block;
+              position: relative;
+              padding-left: 2.4rem;
+              cursor: pointer;
+
+              &:hover {
+                font-weight: 600;
+                text-decoration: underline;
+              }
+
+              &::before {
+                content: "🌐";
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 2.8rem;
+                font-size: 1.8rem;
+              }
             }
 
             .role {
