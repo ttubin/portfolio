@@ -1,22 +1,3 @@
-/* .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-}
- */
-
 @use "@/styles/_mixins" as *;
 
 /* PROJECTS */
@@ -35,23 +16,25 @@
 
   // summary
   .scrollSection {
-    height: 361.4vh;
-
-    .title {
-      padding: 4rem;
-      line-height: 5.2rem;
-      font-size: 4rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
+    height: auto;
+    min-height: 100vh;
 
     .wrapper {
       overflow: hidden;
       height: 100vh;
 
+      .title {
+        padding: 4rem;
+        line-height: 5.2rem;
+        font-size: 4rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
       .cards {
         display: flex;
-        padding: 0 2rem;
+        gap: 4rem;
+        padding: 0 4rem;
         height: 100%;
 
         .card {
@@ -60,7 +43,6 @@
           justify-content: flex-start;
           align-items: flex-end;
           position: relative;
-          margin: 0 2rem 4rem;
           min-width: 28vw;
           height: 80%;
           font-size: 4rem;
@@ -68,11 +50,16 @@
           background-color: var(--color-white);
           border-radius: 1.6rem;
           box-shadow: var(--box-shadow);
+          cursor: pointer;
 
           &:hover {
             .card__text {
               opacity: 1;
             }
+          }
+
+          &__box {
+            pointer-events: none;
           }
 
           &__text {
@@ -88,16 +75,22 @@
             right: 0;
             padding: 4rem;
             background: linear-gradient(to top, rgba(194, 216, 196, 1) 16%, rgba(194, 216, 196, 0) 100%);
-            // opacity: 0;
-            transition: opacity 0.4s;
-            cursor: default;
+
+            .type,
+            .date,
+            .desc,
+            .role,
+            .link {
+              line-height: 2.4rem;
+              font-size: 1.6rem;
+              font-weight: 400;
+              letter-spacing: -0.024em;
+            }
 
             .type {
               display: inline-block;
               position: relative;
-              line-height: 2.4rem;
               color: var(--color-white);
-              font-size: 1.8rem;
               font-weight: 900;
               text-transform: uppercase;
               opacity: 0.9;
@@ -115,19 +108,9 @@
 
             .name {
               margin-top: 2rem;
-              line-height: 4.8rem;
-              font-size: 3.2rem;
+              line-height: 4rem;
+              font-size: 2.8rem;
               font-weight: 900;
-            }
-
-            .date,
-            .desc,
-            .role,
-            .link {
-              line-height: 2.8rem;
-              font-size: 1.8rem;
-              font-weight: 400;
-              letter-spacing: -0.024em;
             }
 
             .desc {
@@ -137,6 +120,7 @@
             .link {
               display: block;
               position: relative;
+              margin-top: 2rem;
               padding-left: 2.4rem;
               font-weight: 600;
               text-decoration: underline;
@@ -145,10 +129,11 @@
               &::before {
                 content: "🌐";
                 position: absolute;
-                top: 0;
+                top: 50%;
                 left: 0;
                 line-height: 2.8rem;
                 font-size: 1.8rem;
+                transform: translateY(-50%);
               }
             }
 
@@ -169,8 +154,317 @@
 
             img {
               display: block;
-              width: 100%;
-              height: 100%;
+              position: static !important;
+              width: 100% !important;
+              height: auto !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MODAL */
+.modal {
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+
+  &__box {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 72vw;
+    height: 80vh;
+    background-color: var(--color-white);
+    border-radius: 2.4rem;
+    cursor: default;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__image {
+    width: 48%;
+
+    img {
+      display: block;
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  &__summary {
+    padding: 4rem 2rem;
+    padding-left: 2.4rem;
+    width: 52%;
+    word-break: keep-all;
+
+    .period,
+    .role,
+    .desc {
+      line-height: 2.8rem;
+      font-size: 2rem;
+    }
+
+    .name {
+      line-height: 4.8rem;
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    .role {
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+
+    .stack,
+    .summary {
+      margin-top: 2rem;
+      list-style: none;
+
+      p {
+        line-height: 2.8rem;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      li {
+        line-height: 2.8rem;
+        font-size: 2rem;
+        list-style: none;
+      }
+    }
+
+    .stack {
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        li {
+          &:not(:last-child) {
+            padding-right: 0.4rem;
+
+            &::after {
+              content: " / ";
+            }
+          }
+        }
+      }
+    }
+
+    .summary {
+      ul {
+        li {
+          position: relative;
+          padding-left: 1.6rem;
+
+          &::before {
+            content: "-";
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .link {
+      display: inline-block;
+      position: relative;
+      margin-top: 2rem;
+      padding-left: 2.4rem;
+      line-height: 2.8rem;
+      font-size: 2rem;
+      font-weight: 600;
+      transition: background-color 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--main-mint);
+      }
+
+      &::before {
+        content: "🌐";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        line-height: 2.8rem;
+        font-size: 1.8rem;
+        transform: translateY(-50%);
+      }
+    }
+
+    .close {
+      display: block;
+      margin: 8rem auto 4rem;
+      padding: 2rem 4rem;
+      width: 24rem;
+      line-height: 2.8rem;
+      color: var(--main-mint);
+      font-size: 2rem;
+      font-weight: 400;
+      background-color: var(--color-white);
+      border: 2px solid var(--main-mint);
+      transition:
+        background-color 0.4s,
+        color 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--main-mint);
+      }
+    }
+  }
+}
+
+/* RESPONSIVE */
+@include desktopL {
+  /* PROJECTS */
+  .projects {
+    // summary
+    .scrollSection {
+      .wrapper {
+        .cards {
+          .card {
+            min-width: 36vw;
+            height: 84%;
+          }
+        }
+      }
+    }
+  }
+
+  /* MODAL */
+  .modal {
+    &__box {
+      width: 92vw;
+    }
+  }
+}
+
+@include desktopM {
+  /* PROJECTS */
+  .projects {
+    // summary
+    .scrollSection {
+      .wrapper {
+        .cards {
+          .card {
+            height: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  /* MODAL */
+  .modal {
+    &__box {
+      width: 80vw;
+    }
+
+    &__summary {
+      padding: 2.4rem 1.6rem;
+      padding-left: 1.6rem;
+
+      .name {
+        line-height: 3.2rem;
+        font-size: 2.8rem;
+      }
+
+      .period,
+      .role,
+      .desc {
+        line-height: 2.4rem;
+        font-size: 1.6rem;
+      }
+
+      .period {
+        margin-top: 0.8rem;
+      }
+
+      .stack,
+      .summary {
+        p {
+          line-height: 2.4rem;
+          font-size: 1.6rem;
+        }
+
+        li {
+          line-height: 2.4rem;
+          font-size: 1.6rem;
+        }
+      }
+
+      .link {
+        line-height: 2.4rem;
+        font-size: 1.6rem;
+      }
+
+      .close {
+        margin: 4rem auto;
+        padding: 1.6rem 2rem;
+        line-height: 2.4rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include desktopS {
+  /* PROJECTS */
+  .projects {
+    // summary
+    .scrollSection {
+      // padding: 1.6rem 2.4rem 2.4rem;
+
+      .wrapper {
+        .title {
+          padding: 1.6rem 4rem 4rem;
+          line-height: 3.6rem;
+          font-size: 2.8rem;
+        }
+
+        .cards {
+          gap: 3.2rem;
+          padding: 0 3.2rem;
+
+          .card {
+            min-width: 40vw;
+            height: 80%;
+
+            &__text {
+              padding: 2.4rem 2rem;
+
+              .type,
+              .date,
+              .desc,
+              .role,
+              .link {
+                line-height: 2rem;
+                font-size: 1.4rem;
+              }
+
+              .name {
+                // margin-top: 1.2rem;
+                line-height: 3.2rem;
+                font-size: 2.4rem;
+              }
             }
           }
         }
@@ -178,8 +472,65 @@
     }
   }
 
-  // media query
-  @include tablet {
+  /* MODAL */
+  .modal {
+    &__box {
+      width: 92vw;
+      height: 72vh;
+    }
+
+    &__image {
+      width: 44%;
+    }
+
+    &__summary {
+      width: 56%;
+
+      .name {
+        line-height: 3.2rem;
+        font-size: 2.4rem;
+      }
+
+      .period,
+      .role,
+      .desc,
+      .link {
+        line-height: 2rem;
+        font-size: 1.4rem;
+      }
+
+      .stack,
+      .summary {
+        margin-top: 1.2rem;
+
+        p {
+          line-height: 2rem;
+          font-size: 1.4rem;
+        }
+
+        li {
+          line-height: 2rem;
+          font-size: 1.4rem;
+        }
+      }
+
+      .close {
+        margin: 2rem auto 0;
+        padding: 1.6rem;
+        color: var(--color-white);
+        border-width: 0.1rem;
+        background-color: var(--main-mint);
+      }
+    }
+  }
+}
+
+@include tablet {
+}
+
+@include mobile {
+  /* PROJECTS */
+  .projects {
     // common
     .web {
       display: none !important;
@@ -191,83 +542,68 @@
 
     // summary
     .scrollSection {
-      height: 430vh;
-
-      .title {
-        line-height: 4.8rem;
-        font-size: 3.2rem;
-      }
-
       .wrapper {
+        .title {
+          padding: 1.6rem 2rem 2rem;
+          line-height: 2.8rem;
+          font-size: 1.6rem;
+        }
+
         .cards {
-          padding-top: 4rem;
+          gap: 2rem;
+          padding: 0 2rem;
+          word-break: keep-all;
 
           .card {
-            min-width: 64vw;
-            height: 72%;
+            min-width: 84vw;
+            height: 84%;
 
-            // &__text {
-            //   padding: 4rem 2rem;
-            // }
+            &__text {
+              padding: 1.4rem;
+              padding-bottom: 2rem;
+
+              .name {
+                line-height: 3.2rem;
+                font-size: 2.4rem;
+              }
+            }
           }
         }
       }
     }
   }
 
-  @include mobile {
-    // summary
-    .scrollSection {
-      height: 324vh;
+  /* MODAL */
+  .modal {
+    &__box {
+      overflow-y: auto;
+      display: block;
+      width: 88vw;
+      height: 80vh;
+      border-radius: 1.6rem;
+    }
 
-      .title {
-        padding: 2rem;
-        line-height: 3.2rem;
-        font-size: 2.4rem;
+    &__image {
+      width: 100%;
+    }
+
+    &__summary {
+      width: 100%;
+
+      .name {
+        line-height: 2.8rem;
+        font-size: 2rem;
       }
 
-      .wrapper {
-        .cards {
-          padding: 4rem 1rem 0;
+      .period {
+        margin-top: 0.4rem;
+      }
 
-          .card {
-            margin: 0 1rem;
-            min-width: 80vw;
-            height: 64%;
-
-            &__text {
-              padding: 2rem 1.6rem;
-
-              .type {
-                line-height: 1.6rem;
-                font-size: 1rem;
-                font-weight: 600;
-
-                &::after {
-                  height: 0.08rem;
-                }
-              }
-
-              .name {
-                margin-top: 1.6rem;
-                line-height: 2.8rem;
-                font-size: 2rem;
-              }
-
-              .date,
-              .desc,
-              .role,
-              .link {
-                line-height: 2rem;
-                font-size: 1.2rem;
-              }
-
-              .role {
-                margin-top: 1.6rem;
-              }
-            }
-          }
-        }
+      .close {
+        padding: 1.2rem;
+        width: 100%;
+        font-size: 1.4rem;
+        font-weight: 600;
       }
     }
   }

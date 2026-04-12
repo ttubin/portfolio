@@ -34,6 +34,7 @@
 
   --main-mint: #c2d8c4;
 
+  --color-mint: #c2d8c4;
   --color-gray: #f5f5f5;
   --color-black: #000000;
   --color-white: #ffffff;
@@ -64,13 +65,4 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-/* CLASS */
-.web {
-  display: block !important;
-}
-
-.mob {
-  display: none !important;
 }

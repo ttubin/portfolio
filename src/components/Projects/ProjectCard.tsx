@@ -8,12 +8,11 @@ import styles from "./Projects.module.scss";
 
 type Props = {
   project: Project;
-  onClick: () => void;
 };
 
-export default function ProjectCard({ project, onClick }: Props) {
+export default function ProjectCard({ project }: Props) {
   return (
-    <div className={styles.card__box} onClick={onClick}>
+    <div className={styles.card__box}>
       <div className={styles.card__text}>
         <p className={styles.type}>{project.type}</p>
         <p className={styles.name}>{project.title}</p>

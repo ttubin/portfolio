@@ -8,7 +8,7 @@ export default function About() {
       <h1 className={styles.title}>about me</h1>
       <div className={styles.content}>
         <div className={styles.photo}>
-          <Image src="/images/profile.png" alt="profile" width={420} height={568} style={{ objectFit: "cover" }} />
+          <Image src="/images/profile.png" alt="profile" fill={true} priority />
         </div>
         <div className={styles.info}>
           <p className={styles.text}>
