@@ -183,9 +183,9 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 72vw;
-    height: 80vh;
+    height: 78vh;
     background-color: var(--color-white);
     border-radius: 2.4rem;
     cursor: default;
@@ -207,8 +207,8 @@
   }
 
   &__summary {
-    padding: 4rem 2rem;
-    padding-left: 2.4rem;
+    padding: 4rem;
+    padding-top: 6.4rem;
     width: 52%;
     word-break: keep-all;
 
@@ -482,11 +482,11 @@
     }
 
     &__image {
-      width: 44%;
+      width: 50%;
     }
 
     &__summary {
-      width: 56%;
+      width: 50%;
 
       .name {
         line-height: 3.2rem;
@@ -528,6 +528,16 @@
 }
 
 @include tablet {
+  /* MODAL */
+  .modal {
+    &__image {
+      width: 48%;
+    }
+
+    &__summary {
+      width: 52%;
+    }
+  }
 }
 
 @include mobile {

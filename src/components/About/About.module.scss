@@ -107,6 +107,33 @@
 
 /* RESPONSIVE */
 @include desktopL {
+  .about {
+    // common
+    .web {
+      display: none !important;
+    }
+
+    .mob {
+      display: block !important;
+    }
+
+    // summary
+    .content {
+      .photo {
+        padding-top: 0;
+        width: 24%;
+
+        img {
+          width: 84% !important;
+        }
+      }
+
+      .info {
+        padding-left: 2rem;
+        width: 76%;
+      }
+    }
+  }
 }
 
 @include desktopM {
@@ -270,9 +297,9 @@
                   }
                 }
 
-                br {
-                  display: none;
-                }
+                // br {
+                //   display: none;
+                // }
               }
             }
           }
