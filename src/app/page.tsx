@@ -13,7 +13,20 @@ export default function Home() {
         <Intro />
         <About />
         <Projects />
-        <Others />
+        <Others
+          project={{
+            num: 0,
+            title: "",
+            summary: "",
+            link: "",
+            period: "",
+            company: "",
+            stack: [],
+            tasks: [],
+            image: "",
+            modal: "",
+          }}
+        />
         <Contact />
       </main>
     </div>
