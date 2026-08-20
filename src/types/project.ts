@@ -1,13 +1,12 @@
 export type Project = {
   num: number;
-  type: string;
   title: string;
-  desc: string;
+  summary: string;
+  link: string;
+  period: string;
+  company: string;
+  stack: string[];
+  tasks: string[];
   image: string;
   modal: string;
-  period: string;
-  stack: string[];
-  role: string;
-  summary: string[];
-  link: string;
 };

@@ -57,7 +57,7 @@ export default function Projects() {
         <div className={styles.wrapper} ref={containerRef}>
           <h1 className={styles.title}>projects</h1>
           <ul className={styles.cards}>
-            {projects.map((project) => (
+            {projects.slice(0, 6).map((project) => (
               <li className={styles.card} key={project.num} onClick={() => setSelected(project)}>
                 <ProjectCard project={project} />
               </li>

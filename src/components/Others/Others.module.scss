@@ -1,0 +1,95 @@
+// @use "@/styles/_mixins" as *;
+
+/* OTHERS */
+.others {
+  padding: 4rem;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-white);
+
+  // common
+  .web {
+    display: block !important;
+  }
+
+  .mob {
+    display: none !important;
+  }
+
+  // summary
+  .title {
+    line-height: 5.2rem;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .content {
+    margin-top: 8rem;
+
+    .summary {
+      line-height: 3.2rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 8rem;
+    height: 52vh;
+
+    .list {
+      width: calc(33.33% - 2.7rem);
+
+      .title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+          display: inline-block;
+          line-height: 2.8rem;
+          font-size: 2rem;
+          text-transform: none;
+        }
+
+        .link {
+          display: block;
+          margin-left: 1.2rem;
+          line-height: 2.8rem;
+          color: var(--main-mint);
+          font-size: 1.6rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 1.2rem;
+
+        .company,
+        .stack {
+          position: relative;
+          margin-left: 0.8rem;
+          padding-left: 1.2rem;
+
+          &::before {
+            content: "I";
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

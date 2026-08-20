@@ -1,0 +1,79 @@
+/* OTHERS */
+.others {
+  padding: 4rem;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-white);
+}
+.others .web {
+  display: block !important;
+}
+.others .mob {
+  display: none !important;
+}
+.others .title {
+  line-height: 5.2rem;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.others .content {
+  margin-top: 8rem;
+}
+.others .content .summary {
+  line-height: 3.2rem;
+  font-size: 2rem;
+}
+.others__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 8rem;
+  height: 52vh;
+}
+.others__list .list {
+  width: calc(33.33% - 2.7rem);
+}
+.others__list .list .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.others__list .list .title p {
+  display: inline-block;
+  line-height: 2.8rem;
+  font-size: 2rem;
+  text-transform: none;
+}
+.others__list .list .title .link {
+  display: block;
+  margin-left: 1.2rem;
+  line-height: 2.8rem;
+  color: var(--main-mint);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.others__list .list .info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+.others__list .list .info .company,
+.others__list .list .info .stack {
+  position: relative;
+  margin-left: 0.8rem;
+  padding-left: 1.2rem;
+}
+.others__list .list .info .company::before,
+.others__list .list .info .stack::before {
+  content: "I";
+  position: absolute;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=Others.module.css.map */
